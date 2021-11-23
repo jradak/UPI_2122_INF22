@@ -115,6 +115,7 @@
             this.Controls.Add(this.lblkIme);
             this.Controls.Add(this.lblPrijava);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Skladište";
             this.ResumeLayout(false);
             this.PerformLayout();

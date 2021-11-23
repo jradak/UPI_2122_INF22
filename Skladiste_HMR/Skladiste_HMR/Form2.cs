@@ -16,5 +16,56 @@ namespace Skladiste_HMR
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            Sjena1.Show();
+            lblInfoOdabir.Show();
+            lblInfoOdabir.Text = "Planer";
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            Sjena1.Hide();
+            lblInfoOdabir.Hide();
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            Sjena2.Show();
+            lblInfoOdabir.Show();
+            lblInfoOdabir.Text = "Skladište";
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            Sjena2.Hide();
+            lblInfoOdabir.Hide();
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            Sjena3.Hide();
+            lblInfoOdabir.Hide();
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            Sjena3.Show();
+            lblInfoOdabir.Show();
+            lblInfoOdabir.Text = "Proizvodi";
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 fm1 = new Form1();
+            fm1.Show();
+        }
     }
 }

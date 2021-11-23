@@ -8,3 +8,4 @@ C:\Users\jopy_\OneDrive\Desktop\skladiste\Skladiste_HMR\Skladiste_HMR\obj\Debug\
 C:\Users\jopy_\OneDrive\Desktop\skladiste\Skladiste_HMR\Skladiste_HMR\obj\Debug\Skladiste_HMR.csproj.CoreCompileInputs.cache
 C:\Users\jopy_\OneDrive\Desktop\skladiste\Skladiste_HMR\Skladiste_HMR\obj\Debug\Skladiste_HMR.exe
 C:\Users\jopy_\OneDrive\Desktop\skladiste\Skladiste_HMR\Skladiste_HMR\obj\Debug\Skladiste_HMR.pdb
+C:\Users\jopy_\OneDrive\Desktop\skladiste\Skladiste_HMR\Skladiste_HMR\obj\Debug\Skladiste_HMR.Form2.resources
