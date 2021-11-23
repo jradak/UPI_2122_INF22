@@ -67,5 +67,18 @@ namespace Skladiste_HMR
             Form1 fm1 = new Form1();
             fm1.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            //ovo je samo primjer
+            this.Hide();
+            Form3 fm3 = new Form3();
+            fm3.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
