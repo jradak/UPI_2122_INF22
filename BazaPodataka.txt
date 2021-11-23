@@ -1,0 +1,64 @@
+create database Skladiste
+GO
+USE Skladiste
+
+create table Korisnik(
+ID_Korisnik int identity(1,1) not null,
+Ime nvarchar(50) not null,
+Prezime nvarchar(50) not null,
+KorisnickoIme nvarchar(50) not null,
+Lozinka nvarchar(50) not null,
+Uloga nvarchar(10) not null
+
+primary key(ID_Korisnik)
+);
+
+create table Proizvod(
+ID_Proizvod int identity(1,1) not null,
+Naziv nvarchar(50) not null,
+Cijena varchar(50) not null
+
+primary key(ID_Proizvod)
+);
+
+create table SektorSkladista(
+ID_Sektor int identity(1,1) not null,
+OznakaSektora varchar(10) not null
+
+primary key(ID_Sektor)
+);
+
+create table Narudzba(
+ID_Narudzba int identity(1,1) not null,
+Datum date not null
+
+primary key(ID_Narudzba)
+);
+
+
+
+//podaci
+--KORISNIK--
+USE Skladiste
+
+DBCC CHECKIDENT("dbo.Korisnik", reseed, 0)
+insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Josipa', 'Radak', 'jradak98', '12345678', 'admin');
+insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Domagoj', 'Hlaca', 'dhlaca98', '12345678', 'admin');
+insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Marko', 'Kumir', 'mkumir00', '12345678', 'admin');
+insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Ivo', 'Ivic', 'ivo123', '12345678', 'poslovoda');
+insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Mate', 'Matic', 'mmatic05', '12345678', 'radnik');
+
+create table Isporuka(
+ID_Isporuka int identity(1,1) not null,
+Kolicina int not null,
+Datum date not null,
+ID_Proizvod int not null,
+ID_Narudzba int not null,
+ID_Sektor int not null
+
+primary key(ID_Isporuka),
+foreign key(ID_Proizvod) references Proizvod(ID_Proizvod),
+foreign key(ID_Narudzba) references Narudzba(ID_Narudzba),
+foreign key(ID_Sektor) references SektorSkladista(ID_Sektor)
+);
+
