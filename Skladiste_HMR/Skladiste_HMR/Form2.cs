@@ -12,9 +12,24 @@ namespace Skladiste_HMR
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public Form2(string kime, string uloga)
         {
             InitializeComponent();
+            lblKorIme.Text = kime;
+            if (uloga == "admin")
+            {
+                pictureBox4.Show();
+                pictureBox1.Hide();
+                pictureBox2.Hide();
+                pictureBox3.Hide();
+            }
+            else
+            {
+                pictureBox4.Hide();
+                pictureBox1.Show();
+                pictureBox2.Show();
+                pictureBox3.Show();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -77,6 +92,20 @@ namespace Skladiste_HMR
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            Sjena2.Show();
+            lblInfoKorR.Show();
+        }
+        private void pictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            Sjena2.Hide();
+            lblInfoKorR.Hide();
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
 
         }

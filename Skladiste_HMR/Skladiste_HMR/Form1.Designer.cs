@@ -87,6 +87,7 @@
             this.tbLozinka.Name = "tbLozinka";
             this.tbLozinka.Size = new System.Drawing.Size(424, 37);
             this.tbLozinka.TabIndex = 4;
+            this.tbLozinka.UseSystemPasswordChar = true;
             // 
             // btnPrijava
             // 

@@ -39,12 +39,15 @@
             this.Sjena3 = new System.Windows.Forms.PictureBox();
             this.btnOdjava = new System.Windows.Forms.Button();
             this.lblInfoOdabir = new System.Windows.Forms.Label();
+            this.lblInfoKorR = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -107,7 +110,7 @@
             this.lblKorIme.BackColor = System.Drawing.Color.Transparent;
             this.lblKorIme.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKorIme.ForeColor = System.Drawing.Color.White;
-            this.lblKorIme.Location = new System.Drawing.Point(642, 66);
+            this.lblKorIme.Location = new System.Drawing.Point(620, 66);
             this.lblKorIme.Name = "lblKorIme";
             this.lblKorIme.Size = new System.Drawing.Size(59, 24);
             this.lblKorIme.TabIndex = 4;
@@ -154,7 +157,7 @@
             this.btnOdjava.BackColor = System.Drawing.Color.White;
             this.btnOdjava.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdjava.ForeColor = System.Drawing.Color.Salmon;
-            this.btnOdjava.Location = new System.Drawing.Point(588, 93);
+            this.btnOdjava.Location = new System.Drawing.Point(588, 119);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(161, 41);
             this.btnOdjava.TabIndex = 8;
@@ -175,6 +178,33 @@
             this.lblInfoOdabir.Text = "lbl";
             this.lblInfoOdabir.Visible = false;
             // 
+            // lblInfoKorR
+            // 
+            this.lblInfoKorR.AutoSize = true;
+            this.lblInfoKorR.BackColor = System.Drawing.Color.White;
+            this.lblInfoKorR.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoKorR.ForeColor = System.Drawing.Color.DimGray;
+            this.lblInfoKorR.Location = new System.Drawing.Point(371, 456);
+            this.lblInfoKorR.Name = "lblInfoKorR";
+            this.lblInfoKorR.Size = new System.Drawing.Size(178, 29);
+            this.lblInfoKorR.TabIndex = 17;
+            this.lblInfoKorR.Text = "Korisnički računi";
+            this.lblInfoKorR.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(389, 201);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(154, 152);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox_MouseLeave);
+            this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -182,6 +212,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(926, 562);
+            this.Controls.Add(this.lblInfoKorR);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.lblInfoOdabir);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.lblKorIme);
@@ -202,6 +234,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Sjena1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +252,7 @@
         private System.Windows.Forms.PictureBox Sjena3;
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Label lblInfoOdabir;
+        private System.Windows.Forms.Label lblInfoKorR;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
