@@ -28,125 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            this.btnOdjava = new System.Windows.Forms.Button();
-            this.lblKorIme = new System.Windows.Forms.Label();
-            this.lblInfoOPrijavi = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Sjena1 = new System.Windows.Forms.PictureBox();
-            this.lblInfoKorR = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Sjena1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnOdjava
+            // dataGridView1
             // 
-            this.btnOdjava.BackColor = System.Drawing.Color.White;
-            this.btnOdjava.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOdjava.ForeColor = System.Drawing.Color.Salmon;
-            this.btnOdjava.Location = new System.Drawing.Point(591, 94);
-            this.btnOdjava.Name = "btnOdjava";
-            this.btnOdjava.Size = new System.Drawing.Size(161, 41);
-            this.btnOdjava.TabIndex = 11;
-            this.btnOdjava.Text = "Odjava";
-            this.btnOdjava.UseVisualStyleBackColor = false;
-            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(479, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(435, 599);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // lblKorIme
+            // panel1
             // 
-            this.lblKorIme.AutoSize = true;
-            this.lblKorIme.BackColor = System.Drawing.Color.Transparent;
-            this.lblKorIme.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKorIme.ForeColor = System.Drawing.Color.White;
-            this.lblKorIme.Location = new System.Drawing.Point(645, 67);
-            this.lblKorIme.Name = "lblKorIme";
-            this.lblKorIme.Size = new System.Drawing.Size(59, 24);
-            this.lblKorIme.TabIndex = 10;
-            this.lblKorIme.Text = "@ime";
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(49, 294);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(405, 328);
+            this.panel1.TabIndex = 2;
             // 
-            // lblInfoOPrijavi
+            // button1
             // 
-            this.lblInfoOPrijavi.AutoSize = true;
-            this.lblInfoOPrijavi.BackColor = System.Drawing.Color.Transparent;
-            this.lblInfoOPrijavi.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoOPrijavi.ForeColor = System.Drawing.Color.White;
-            this.lblInfoOPrijavi.Location = new System.Drawing.Point(587, 34);
-            this.lblInfoOPrijavi.Name = "lblInfoOPrijavi";
-            this.lblInfoOPrijavi.Size = new System.Drawing.Size(165, 24);
-            this.lblInfoOPrijavi.TabIndex = 9;
-            this.lblInfoOPrijavi.Text = "Prijavljeni ste kao:";
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 90);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "A";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // button2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(388, 204);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(154, 152);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
-            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            this.button2.Location = new System.Drawing.Point(160, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(242, 90);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "B";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // Sjena1
+            // button3
             // 
-            this.Sjena1.BackColor = System.Drawing.Color.Transparent;
-            this.Sjena1.Image = ((System.Drawing.Image)(resources.GetObject("Sjena1.Image")));
-            this.Sjena1.Location = new System.Drawing.Point(373, 193);
-            this.Sjena1.Name = "Sjena1";
-            this.Sjena1.Size = new System.Drawing.Size(190, 334);
-            this.Sjena1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Sjena1.TabIndex = 13;
-            this.Sjena1.TabStop = false;
-            this.Sjena1.Visible = false;
+            this.button3.Location = new System.Drawing.Point(3, 235);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(129, 90);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "C";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // lblInfoKorR
+            // button4
             // 
-            this.lblInfoKorR.AutoSize = true;
-            this.lblInfoKorR.BackColor = System.Drawing.Color.White;
-            this.lblInfoKorR.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoKorR.ForeColor = System.Drawing.Color.DimGray;
-            this.lblInfoKorR.Location = new System.Drawing.Point(380, 459);
-            this.lblInfoKorR.Name = "lblInfoKorR";
-            this.lblInfoKorR.Size = new System.Drawing.Size(178, 29);
-            this.lblInfoKorR.TabIndex = 14;
-            this.lblInfoKorR.Text = "Korisnički računi";
-            this.lblInfoKorR.Visible = false;
+            this.button4.Location = new System.Drawing.Point(138, 235);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(126, 90);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "D";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(270, 235);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(132, 90);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "E";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(926, 562);
-            this.Controls.Add(this.lblInfoKorR);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Sjena1);
-            this.Controls.Add(this.btnOdjava);
-            this.Controls.Add(this.lblKorIme);
-            this.Controls.Add(this.lblInfoOPrijavi);
+            this.ClientSize = new System.Drawing.Size(926, 658);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Sjena1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnOdjava;
-        private System.Windows.Forms.Label lblKorIme;
-        private System.Windows.Forms.Label lblInfoOPrijavi;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox Sjena1;
-        private System.Windows.Forms.Label lblInfoKorR;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
