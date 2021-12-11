@@ -18,8 +18,6 @@ namespace Skladiste_HMR
         {
             InitializeComponent();
         }
-        //string na bazu podataka
-        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Skladiste;Integrated Security=True;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -39,7 +37,7 @@ namespace Skladiste_HMR
             {
                 //string queryPorslijedivanje = "Select KorisnickoIme, Uloga from Korisnik where korisnickoIme=@kIme and Lozinka=@lozinka";
 
-                SqlConnection con = new SqlConnection(connectionString);
+                SqlConnection con = new SqlConnection(Konstante.ConnectionString);
                 SqlCommand cmd = new SqlCommand("Select * from Korisnik where KorisnickoIme=@kIme and Lozinka=@lozinka", con);
                 cmd.Parameters.AddWithValue("@kIme", kIme);
                 cmd.Parameters.AddWithValue("@lozinka", lozinka);

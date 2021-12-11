@@ -34,7 +34,6 @@ namespace Skladiste_HMR
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form4 fm4 = new Form4();
             fm4.Show();
         }
@@ -67,7 +66,6 @@ namespace Skladiste_HMR
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             //ovo je samo primjer
-            this.Hide();
             Form3 fm3 = new Form3();
             fm3.Show();
         }
@@ -89,7 +87,6 @@ namespace Skladiste_HMR
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form5 fm5 = new Form5();
             fm5.Show();
         }
@@ -106,7 +103,6 @@ namespace Skladiste_HMR
         }
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form6 fm6 = new Form6();
             fm6.Show();
         }
@@ -117,6 +113,5 @@ namespace Skladiste_HMR
             Form1 fm1 = new Form1();
             fm1.Show();
         }
-
     }
 }

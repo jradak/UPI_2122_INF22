@@ -12,8 +12,6 @@ namespace Skladiste_HMR
         {
             InitializeComponent();
         }
-        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Skladiste;Integrated Security=True;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
         private void Form6_Load(object sender, EventArgs e)
         {
             button1.Hide();
@@ -32,7 +30,7 @@ namespace Skladiste_HMR
             label5.Hide();
             try
             {
-                SqlConnection con = new SqlConnection(connectionString);
+                SqlConnection con = new SqlConnection(Konstante.ConnectionString);
                 SqlCommand cmd = new SqlCommand("Select * from Korisnik", con);
                 con.Open();
                 SqlDataAdapter adapt = new SqlDataAdapter(cmd);
@@ -113,6 +111,11 @@ namespace Skladiste_HMR
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }
