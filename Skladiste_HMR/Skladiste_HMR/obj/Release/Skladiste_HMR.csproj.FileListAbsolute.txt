@@ -1,0 +1,15 @@
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\bin\Release\Skladiste_HMR.exe.config
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\bin\Release\Skladiste_HMR.exe
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\bin\Release\Skladiste_HMR.pdb
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.csprojAssemblyReference.cache
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.Form1.resources
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.Form2.resources
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.Form3.resources
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.Form4.resources
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.Form5.resources
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.Form6.resources
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.Properties.Resources.resources
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.csproj.GenerateResource.cache
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.csproj.CoreCompileInputs.cache
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.exe
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\Skladiste_HMR\obj\Release\Skladiste_HMR.pdb

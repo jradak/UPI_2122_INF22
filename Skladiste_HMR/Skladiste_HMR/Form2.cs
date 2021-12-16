@@ -65,6 +65,9 @@ namespace Skladiste_HMR
         }
         private void picBox_Skladiste_Click(object sender, EventArgs e)
         {
+            Sjena2.Show();
+            lblInfoOdabir.Show();
+            lblInfoOdabir.Text = "Skladište";
             //ovo je samo primjer
             Form3 fm3 = new Form3();
             fm3.Show();
@@ -87,6 +90,9 @@ namespace Skladiste_HMR
 
         private void picBox_Proizvodi_Click(object sender, EventArgs e)
         {
+            Sjena3.Show();
+            lblInfoOdabir.Show();
+            lblInfoOdabir.Text = "Proizvodi";
             Form5 fm5 = new Form5();
             fm5.Show();
         }
@@ -98,11 +104,14 @@ namespace Skladiste_HMR
         }
         private void picBox_Korisnici_MouseLeave(object sender, EventArgs e)
         {
+
             Sjena2.Hide();
             lblInfoKorR.Hide();
         }
         private void picBox_Korisnici_Click(object sender, EventArgs e)
         {
+            Sjena2.Show();
+            lblInfoKorR.Show();
             Form6 fm6 = new Form6();
             fm6.Show();
         }

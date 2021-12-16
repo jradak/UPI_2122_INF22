@@ -88,7 +88,7 @@
             this.picBox_Proizvodi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox_Proizvodi.TabIndex = 2;
             this.picBox_Proizvodi.TabStop = false;
-            this.picBox_Proizvodi.Click += new System.EventHandler(this.picBox_Korisnici_MouseHover);
+            this.picBox_Proizvodi.Click += new System.EventHandler(this.picBox_Proizvodi_Click);
             this.picBox_Proizvodi.MouseLeave += new System.EventHandler(this.picBox_Proizvodi_MouseLeave);
             this.picBox_Proizvodi.MouseHover += new System.EventHandler(this.picBox_Proizvodi_MouseHover);
             // 
@@ -202,8 +202,8 @@
             this.picBox_Korisnici.TabIndex = 15;
             this.picBox_Korisnici.TabStop = false;
             this.picBox_Korisnici.Click += new System.EventHandler(this.picBox_Korisnici_Click);
-            this.picBox_Korisnici.MouseLeave += new System.EventHandler(this.picBox_Korisnici_MouseHover);
-            this.picBox_Korisnici.MouseHover += new System.EventHandler(this.picBox_Proizvodi_Click);
+            this.picBox_Korisnici.MouseLeave += new System.EventHandler(this.picBox_Korisnici_MouseLeave);
+            this.picBox_Korisnici.MouseHover += new System.EventHandler(this.picBox_Korisnici_MouseHover);
             // 
             // Form2
             // 

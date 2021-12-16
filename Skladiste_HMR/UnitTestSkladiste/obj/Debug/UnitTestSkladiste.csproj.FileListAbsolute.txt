@@ -1,0 +1,17 @@
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\obj\Debug\UnitTestSkladiste.csprojAssemblyReference.cache
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\obj\Debug\UnitTestSkladiste.csproj.CoreCompileInputs.cache
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\UnitTestSkladiste.dll
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\UnitTestSkladiste.pdb
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\Skladiste_HMR.exe
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\Skladiste_HMR.pdb
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\Skladiste_HMR.exe.config
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\obj\Debug\UnitTestSkladiste.csproj.CopyComplete
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\obj\Debug\UnitTestSkladiste.dll
+C:\Users\jopy_\OneDrive\Desktop\UPI_2122_INF22\Skladiste_HMR\UnitTestSkladiste\obj\Debug\UnitTestSkladiste.pdb
