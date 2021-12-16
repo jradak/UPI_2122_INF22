@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.picBox_Planer = new System.Windows.Forms.PictureBox();
+            this.picBox_Skladiste = new System.Windows.Forms.PictureBox();
+            this.picBox_Proizvodi = new System.Windows.Forms.PictureBox();
             this.lblInfoOPrijavi = new System.Windows.Forms.Label();
             this.lblKorIme = new System.Windows.Forms.Label();
             this.Sjena1 = new System.Windows.Forms.PictureBox();
@@ -40,57 +40,57 @@
             this.btnOdjava = new System.Windows.Forms.Button();
             this.lblInfoOdabir = new System.Windows.Forms.Label();
             this.lblInfoKorR = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.picBox_Korisnici = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Planer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Skladiste)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Proizvodi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Korisnici)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picBox_Planer
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(162, 201);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(154, 152);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
-            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            this.picBox_Planer.BackColor = System.Drawing.Color.White;
+            this.picBox_Planer.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Planer.Image")));
+            this.picBox_Planer.Location = new System.Drawing.Point(162, 201);
+            this.picBox_Planer.Name = "picBox_Planer";
+            this.picBox_Planer.Size = new System.Drawing.Size(154, 152);
+            this.picBox_Planer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_Planer.TabIndex = 0;
+            this.picBox_Planer.TabStop = false;
+            this.picBox_Planer.Click += new System.EventHandler(this.picBox_Planer_Click);
+            this.picBox_Planer.MouseLeave += new System.EventHandler(this.picBox_Planer_MouseLeave);
+            this.picBox_Planer.MouseHover += new System.EventHandler(this.picBox_Planer_MouseHover);
             // 
-            // pictureBox2
+            // picBox_Skladiste
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(389, 201);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(154, 152);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            this.picBox_Skladiste.BackColor = System.Drawing.Color.White;
+            this.picBox_Skladiste.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Skladiste.Image")));
+            this.picBox_Skladiste.Location = new System.Drawing.Point(389, 201);
+            this.picBox_Skladiste.Name = "picBox_Skladiste";
+            this.picBox_Skladiste.Size = new System.Drawing.Size(154, 152);
+            this.picBox_Skladiste.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_Skladiste.TabIndex = 1;
+            this.picBox_Skladiste.TabStop = false;
+            this.picBox_Skladiste.Click += new System.EventHandler(this.picBox_Skladiste_Click);
+            this.picBox_Skladiste.MouseLeave += new System.EventHandler(this.picBox_Skladiste_MouseLeave);
+            this.picBox_Skladiste.MouseHover += new System.EventHandler(this.picBox_Skladiste_MouseHover);
             // 
-            // pictureBox3
+            // picBox_Proizvodi
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(609, 201);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(154, 152);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            this.picBox_Proizvodi.BackColor = System.Drawing.Color.White;
+            this.picBox_Proizvodi.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Proizvodi.Image")));
+            this.picBox_Proizvodi.Location = new System.Drawing.Point(609, 201);
+            this.picBox_Proizvodi.Name = "picBox_Proizvodi";
+            this.picBox_Proizvodi.Size = new System.Drawing.Size(154, 152);
+            this.picBox_Proizvodi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_Proizvodi.TabIndex = 2;
+            this.picBox_Proizvodi.TabStop = false;
+            this.picBox_Proizvodi.Click += new System.EventHandler(this.picBox_Korisnici_MouseHover);
+            this.picBox_Proizvodi.MouseLeave += new System.EventHandler(this.picBox_Proizvodi_MouseLeave);
+            this.picBox_Proizvodi.MouseHover += new System.EventHandler(this.picBox_Proizvodi_MouseHover);
             // 
             // lblInfoOPrijavi
             // 
@@ -191,19 +191,19 @@
             this.lblInfoKorR.Text = "Korisnički računi";
             this.lblInfoKorR.Visible = false;
             // 
-            // pictureBox4
+            // picBox_Korisnici
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(389, 201);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(154, 152);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 15;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox_MouseLeave);
-            this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
+            this.picBox_Korisnici.BackColor = System.Drawing.Color.White;
+            this.picBox_Korisnici.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Korisnici.Image")));
+            this.picBox_Korisnici.Location = new System.Drawing.Point(389, 201);
+            this.picBox_Korisnici.Name = "picBox_Korisnici";
+            this.picBox_Korisnici.Size = new System.Drawing.Size(154, 152);
+            this.picBox_Korisnici.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_Korisnici.TabIndex = 15;
+            this.picBox_Korisnici.TabStop = false;
+            this.picBox_Korisnici.Click += new System.EventHandler(this.picBox_Korisnici_Click);
+            this.picBox_Korisnici.MouseLeave += new System.EventHandler(this.picBox_Korisnici_MouseHover);
+            this.picBox_Korisnici.MouseHover += new System.EventHandler(this.picBox_Proizvodi_Click);
             // 
             // Form2
             // 
@@ -213,14 +213,14 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(926, 562);
             this.Controls.Add(this.lblInfoKorR);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.picBox_Korisnici);
             this.Controls.Add(this.lblInfoOdabir);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.lblKorIme);
             this.Controls.Add(this.lblInfoOPrijavi);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picBox_Proizvodi);
+            this.Controls.Add(this.picBox_Skladiste);
+            this.Controls.Add(this.picBox_Planer);
             this.Controls.Add(this.Sjena1);
             this.Controls.Add(this.Sjena2);
             this.Controls.Add(this.Sjena3);
@@ -228,13 +228,14 @@
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Planer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Skladiste)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Proizvodi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Korisnici)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,9 +243,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picBox_Planer;
+        private System.Windows.Forms.PictureBox picBox_Skladiste;
+        private System.Windows.Forms.PictureBox picBox_Proizvodi;
         private System.Windows.Forms.Label lblInfoOPrijavi;
         private System.Windows.Forms.Label lblKorIme;
         private System.Windows.Forms.PictureBox Sjena1;
@@ -253,6 +254,6 @@
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Label lblInfoOdabir;
         private System.Windows.Forms.Label lblInfoKorR;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox picBox_Korisnici;
     }
 }

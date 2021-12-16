@@ -13,14 +13,14 @@ namespace Skladiste_HMR
         }
         private void Form5_Load(object sender, EventArgs e)
         {
-            button1.Hide();
-            button2.Hide();
-            button4.Hide();
-            button5.Hide();
-            textBox1.Hide();
-            textBox2.Hide();
-            label1.Hide();
-            label2.Hide();
+            btnBrisiPr.Hide();
+            btnUrediPr.Hide();
+            btnSpremiPr.Hide();
+            btnPromijeniPr.Hide();
+            txtNazivPr.Hide();
+            txtCijenaPr.Hide();
+            lblNazivPr.Hide();
+            lblCijenaPr.Hide();
             try
             {
                 SqlConnection con = new SqlConnection(Konstante.ConnectionString);
@@ -42,51 +42,51 @@ namespace Skladiste_HMR
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            button1.Show();
-            button2.Show();
-            button4.Hide();
-            button5.Hide();
-            textBox1.Hide();
-            textBox2.Hide();
-            label1.Hide();
-            label2.Hide();
+            btnBrisiPr.Show();
+            btnUrediPr.Show();
+            btnSpremiPr.Hide();
+            btnPromijeniPr.Hide();
+            txtNazivPr.Hide();
+            txtCijenaPr.Hide();
+            lblNazivPr.Hide();
+            lblCijenaPr.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBrisiPr_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnDodajPr_Click(object sender, EventArgs e)
         {
-            button4.Show();
-            button5.Hide();
-            textBox1.Show();
-            textBox2.Show();
-            label1.Show();
-            label2.Show();
-            textBox1.Text = "";
-            textBox2.Text = "";
+            btnSpremiPr.Show();
+            btnPromijeniPr.Hide();
+            txtNazivPr.Show();
+            txtCijenaPr.Show();
+            lblNazivPr.Show();
+            lblCijenaPr.Show();
+            txtNazivPr.Text = "";
+            txtCijenaPr.Text = "";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnUrediPr_Click(object sender, EventArgs e)
         {
-            button5.Hide();
-            button4.Show();
-            textBox1.Show();
-            textBox2.Show();
-            label1.Show();
-            label2.Show();
-            textBox1.Text = "";
-            textBox2.Text = "";
+            btnPromijeniPr.Hide();
+            btnSpremiPr.Show();
+            txtNazivPr.Show();
+            txtCijenaPr.Show();
+            lblNazivPr.Show();
+            lblCijenaPr.Show();
+            txtNazivPr.Text = "";
+            txtCijenaPr.Text = "";
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnPromijeniPr_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnSpremiPr_Click(object sender, EventArgs e)
         {
 
         }

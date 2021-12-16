@@ -14,20 +14,20 @@ namespace Skladiste_HMR
         }
         private void Form6_Load(object sender, EventArgs e)
         {
-            button1.Hide();
-            button2.Hide();
-            button4.Hide();
-            button5.Hide();
-            textBox1.Hide();
-            textBox2.Hide();
-            textBox3.Hide();
-            textBox4.Hide();
-            comboBox1.Hide();
-            label1.Hide();
-            label2.Hide();
-            label3.Hide();
-            label4.Hide();
-            label5.Hide();
+            btnBrisiKor.Hide();
+            btnUrediKor.Hide();
+            btnSpremiKor.Hide();
+            btnPromijeniKor.Hide();
+            txtIme.Hide();
+            txtPrezime.Hide();
+            txtKorIme.Hide();
+            txtLozinka.Hide();
+            cmbBoxUloga.Hide();
+            lblIme.Hide();
+            lblPrezime.Hide();
+            lblKorIme.Hide();
+            lblLozinka.Hide();
+            lblUloga.Hide();
             try
             {
                 SqlConnection con = new SqlConnection(Konstante.ConnectionString);
@@ -49,73 +49,78 @@ namespace Skladiste_HMR
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            button1.Show();
-            button2.Show();
-            button4.Hide();
-            button5.Hide();
-            textBox1.Hide();
-            textBox2.Hide();
-            textBox3.Hide();
-            textBox4.Hide();
-            comboBox1.Hide();
-            label1.Hide();
-            label2.Hide();
-            label3.Hide();
-            label4.Hide();
-            label5.Hide();
+            btnBrisiKor.Show();
+            btnUrediKor.Show();
+            btnSpremiKor.Hide();
+            btnPromijeniKor.Hide();
+            txtIme.Hide();
+            txtPrezime.Hide();
+            txtKorIme.Hide();
+            txtLozinka.Hide();
+            cmbBoxUloga.Hide();
+            lblIme.Hide();
+            lblPrezime.Hide();
+            lblKorIme.Hide();
+            lblLozinka.Hide();
+            lblUloga.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnDodajKor_Click(object sender, EventArgs e)
         {
-            textBox1.Show();
-            textBox2.Show();
-            textBox3.Show();
-            textBox4.Show();
-            comboBox1.Show();
-            button4.Show();
-            button5.Hide();
+            txtIme.Show();
+            txtPrezime.Show();
+            txtKorIme.Show();
+            txtLozinka.Show();
+            cmbBoxUloga.Show();
+            btnSpremiKor.Show();
+            btnPromijeniKor.Hide();
 
-            label1.Show();
-            label2.Show();
-            label3.Show();
-            label4.Show();
-            label5.Show();
+            lblIme.Show();
+            lblPrezime.Show();
+            lblKorIme.Show();
+            lblLozinka.Show();
+            lblUloga.Show();
 
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
+            txtIme.Text = "";
+            txtPrezime.Text = "";
+            txtKorIme.Text = "";
+            txtLozinka.Text = "";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnUrediKor_Click(object sender, EventArgs e)
         {
-            textBox1.Show();
-            textBox2.Show();
-            textBox3.Show();
-            textBox4.Show();
-            comboBox1.Show();
-            button4.Hide();
-            button5.Show();
+            txtIme.Show();
+            txtPrezime.Show();
+            txtKorIme.Show();
+            txtLozinka.Show();
+            cmbBoxUloga.Show();
+            btnSpremiKor.Hide();
+            btnPromijeniKor.Show();
 
-            label1.Show();
-            label2.Show();
-            label3.Show();
-            label4.Show();
-            label5.Show();
+            lblIme.Show();
+            lblPrezime.Show();
+            lblKorIme.Show();
+            lblLozinka.Show();
+            lblUloga.Show();
 
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            comboBox1.Text = "";
+            txtIme.Text = "";
+            txtPrezime.Text = "";
+            txtKorIme.Text = "";
+            txtLozinka.Text = "";
+            cmbBoxUloga.Text = "";
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnSpremiKor_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnPromijeniKor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBrisiKor_Click(object sender, EventArgs e)
         {
 
         }

@@ -28,123 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblDatum = new System.Windows.Forms.Label();
+            this.lblProizvod = new System.Windows.Forms.Label();
+            this.lblKolicina = new System.Windows.Forms.Label();
+            this.btnPromijeniNar = new System.Windows.Forms.Button();
+            this.btnSpremiNar = new System.Windows.Forms.Button();
+            this.txtProizvod = new System.Windows.Forms.TextBox();
+            this.txtKolicina = new System.Windows.Forms.TextBox();
+            this.btnDodajNar = new System.Windows.Forms.Button();
+            this.btnUrediNar = new System.Windows.Forms.Button();
+            this.btnBrisiNar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datumNar = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label5
+            // lblDatum
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(227, 571);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 29);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Datum:";
+            this.lblDatum.AutoSize = true;
+            this.lblDatum.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatum.Location = new System.Drawing.Point(227, 571);
+            this.lblDatum.Name = "lblDatum";
+            this.lblDatum.Size = new System.Drawing.Size(88, 29);
+            this.lblDatum.TabIndex = 31;
+            this.lblDatum.Text = "Datum:";
             // 
-            // label4
+            // lblProizvod
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(208, 528);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 29);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Proizvod:";
+            this.lblProizvod.AutoSize = true;
+            this.lblProizvod.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProizvod.Location = new System.Drawing.Point(208, 528);
+            this.lblProizvod.Name = "lblProizvod";
+            this.lblProizvod.Size = new System.Drawing.Size(107, 29);
+            this.lblProizvod.TabIndex = 30;
+            this.lblProizvod.Text = "Proizvod:";
             // 
-            // label3
+            // lblKolicina
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(210, 485);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 29);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Kolicina: ";
+            this.lblKolicina.AutoSize = true;
+            this.lblKolicina.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKolicina.Location = new System.Drawing.Point(210, 485);
+            this.lblKolicina.Name = "lblKolicina";
+            this.lblKolicina.Size = new System.Drawing.Size(105, 29);
+            this.lblKolicina.TabIndex = 29;
+            this.lblKolicina.Text = "Kolicina: ";
             // 
-            // button5
+            // btnPromijeniNar
             // 
-            this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Salmon;
-            this.button5.Location = new System.Drawing.Point(610, 470);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(136, 58);
-            this.button5.TabIndex = 26;
-            this.button5.Text = "PROMIJENI";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnPromijeniNar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPromijeniNar.ForeColor = System.Drawing.Color.Salmon;
+            this.btnPromijeniNar.Location = new System.Drawing.Point(610, 470);
+            this.btnPromijeniNar.Name = "btnPromijeniNar";
+            this.btnPromijeniNar.Size = new System.Drawing.Size(136, 58);
+            this.btnPromijeniNar.TabIndex = 26;
+            this.btnPromijeniNar.Text = "PROMIJENI";
+            this.btnPromijeniNar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnSpremiNar
             // 
-            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Salmon;
-            this.button4.Location = new System.Drawing.Point(610, 470);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 58);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "SPREMI";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSpremiNar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpremiNar.ForeColor = System.Drawing.Color.Salmon;
+            this.btnSpremiNar.Location = new System.Drawing.Point(610, 470);
+            this.btnSpremiNar.Name = "btnSpremiNar";
+            this.btnSpremiNar.Size = new System.Drawing.Size(136, 58);
+            this.btnSpremiNar.TabIndex = 25;
+            this.btnSpremiNar.Text = "SPREMI";
+            this.btnSpremiNar.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // txtProizvod
             // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox4.Location = new System.Drawing.Point(336, 525);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(210, 37);
-            this.textBox4.TabIndex = 24;
+            this.txtProizvod.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProizvod.ForeColor = System.Drawing.Color.DimGray;
+            this.txtProizvod.Location = new System.Drawing.Point(336, 525);
+            this.txtProizvod.Name = "txtProizvod";
+            this.txtProizvod.Size = new System.Drawing.Size(210, 37);
+            this.txtProizvod.TabIndex = 24;
             // 
-            // textBox3
+            // txtKolicina
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox3.Location = new System.Drawing.Point(336, 482);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 37);
-            this.textBox3.TabIndex = 23;
+            this.txtKolicina.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKolicina.ForeColor = System.Drawing.Color.DimGray;
+            this.txtKolicina.Location = new System.Drawing.Point(336, 482);
+            this.txtKolicina.Name = "txtKolicina";
+            this.txtKolicina.Size = new System.Drawing.Size(210, 37);
+            this.txtKolicina.TabIndex = 23;
             // 
-            // button3
+            // btnDodajNar
             // 
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Salmon;
-            this.button3.Location = new System.Drawing.Point(415, 383);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 58);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "DODAJ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDodajNar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodajNar.ForeColor = System.Drawing.Color.Salmon;
+            this.btnDodajNar.Location = new System.Drawing.Point(415, 383);
+            this.btnDodajNar.Name = "btnDodajNar";
+            this.btnDodajNar.Size = new System.Drawing.Size(131, 58);
+            this.btnDodajNar.TabIndex = 20;
+            this.btnDodajNar.Text = "DODAJ";
+            this.btnDodajNar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnUrediNar
             // 
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Salmon;
-            this.button2.Location = new System.Drawing.Point(599, 383);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 58);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "UREDI";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUrediNar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUrediNar.ForeColor = System.Drawing.Color.Salmon;
+            this.btnUrediNar.Location = new System.Drawing.Point(599, 383);
+            this.btnUrediNar.Name = "btnUrediNar";
+            this.btnUrediNar.Size = new System.Drawing.Size(131, 58);
+            this.btnUrediNar.TabIndex = 19;
+            this.btnUrediNar.Text = "UREDI";
+            this.btnUrediNar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnBrisiNar
             // 
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Salmon;
-            this.button1.Location = new System.Drawing.Point(229, 383);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 58);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "BRIŠI";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBrisiNar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrisiNar.ForeColor = System.Drawing.Color.Salmon;
+            this.btnBrisiNar.Location = new System.Drawing.Point(229, 383);
+            this.btnBrisiNar.Name = "btnBrisiNar";
+            this.btnBrisiNar.Size = new System.Drawing.Size(131, 58);
+            this.btnBrisiNar.TabIndex = 18;
+            this.btnBrisiNar.Text = "BRIŠI";
+            this.btnBrisiNar.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -163,14 +163,14 @@
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dateTimePicker1
+            // datumNar
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dateTimePicker1.Location = new System.Drawing.Point(336, 574);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 26);
-            this.dateTimePicker1.TabIndex = 33;
+            this.datumNar.CalendarFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datumNar.CalendarMonthBackground = System.Drawing.Color.White;
+            this.datumNar.Location = new System.Drawing.Point(336, 574);
+            this.datumNar.Name = "datumNar";
+            this.datumNar.Size = new System.Drawing.Size(210, 26);
+            this.datumNar.TabIndex = 33;
             // 
             // Form4
             // 
@@ -178,17 +178,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(926, 620);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.datumNar);
+            this.Controls.Add(this.lblDatum);
+            this.Controls.Add(this.lblProizvod);
+            this.Controls.Add(this.lblKolicina);
+            this.Controls.Add(this.btnPromijeniNar);
+            this.Controls.Add(this.btnSpremiNar);
+            this.Controls.Add(this.txtProizvod);
+            this.Controls.Add(this.txtKolicina);
+            this.Controls.Add(this.btnDodajNar);
+            this.Controls.Add(this.btnUrediNar);
+            this.Controls.Add(this.btnBrisiNar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form4";
             this.Text = "Form4";
@@ -199,17 +199,17 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblDatum;
+        private System.Windows.Forms.Label lblProizvod;
+        private System.Windows.Forms.Label lblKolicina;
+        private System.Windows.Forms.Button btnPromijeniNar;
+        private System.Windows.Forms.Button btnSpremiNar;
+        private System.Windows.Forms.TextBox txtProizvod;
+        private System.Windows.Forms.TextBox txtKolicina;
+        private System.Windows.Forms.Button btnDodajNar;
+        private System.Windows.Forms.Button btnUrediNar;
+        private System.Windows.Forms.Button btnBrisiNar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datumNar;
     }
 }

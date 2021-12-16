@@ -27,7 +27,7 @@ namespace Skladiste_HMR
         {
             string kIme = tbKIme.Text;
             string lozinka = tbLozinka.Text;
-            string uloga = "";
+         
             if (kIme == "" || lozinka == "") 
             {
                 MessageBox.Show("Niste popunili sva polja! Pokušajte ponovno!");
@@ -53,11 +53,18 @@ namespace Skladiste_HMR
                 //If count is equal to 1, than show frmMain form
                 if (count == 1)
                 {
+                    string ime = dt.Rows[0]["Ime"].ToString();
+                    string pr = dt.Rows[0]["Prezime"].ToString();
+                    string korIme = dt.Rows[0]["KorisnickoIme"].ToString();
+                    string loz = dt.Rows[0]["Lozinka"].ToString();
+                    string uloga = dt.Rows[0]["Uloga"].ToString();
+
+                    Korisnik k = new Korisnik(ime, pr, korIme, loz, uloga);
+
                     MessageBox.Show("Usješno ste se prijavili!");
-                    uloga = dt.Rows[0]["Uloga"].ToString();
                     this.Hide();
-                    
-                    Form2 fm2 = new Form2(kIme, uloga);
+
+                    Form2 fm2 = new Form2(kIme, k.Uloga);
                     fm2.Show();
                 }
                 else
@@ -69,6 +76,11 @@ namespace Skladiste_HMR
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
