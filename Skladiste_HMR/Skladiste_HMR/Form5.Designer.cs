@@ -38,6 +38,8 @@
             this.btnUrediPr = new System.Windows.Forms.Button();
             this.btnBrisiPr = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmbBoxValuta = new System.Windows.Forms.ComboBox();
+            this.lblValuta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,6 +147,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(51, 12);
             this.dataGridView1.Name = "dataGridView1";
@@ -156,12 +159,36 @@
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
+            // cmbBoxValuta
+            // 
+            this.cmbBoxValuta.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBoxValuta.FormattingEnabled = true;
+            this.cmbBoxValuta.Items.AddRange(new object[] {
+            "HRK",
+            "€"});
+            this.cmbBoxValuta.Location = new System.Drawing.Point(185, 548);
+            this.cmbBoxValuta.Name = "cmbBoxValuta";
+            this.cmbBoxValuta.Size = new System.Drawing.Size(210, 37);
+            this.cmbBoxValuta.TabIndex = 29;
+            // 
+            // lblValuta
+            // 
+            this.lblValuta.AutoSize = true;
+            this.lblValuta.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValuta.Location = new System.Drawing.Point(86, 551);
+            this.lblValuta.Name = "lblValuta";
+            this.lblValuta.Size = new System.Drawing.Size(86, 29);
+            this.lblValuta.TabIndex = 30;
+            this.lblValuta.Text = "Valuta:";
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(683, 585);
+            this.ClientSize = new System.Drawing.Size(683, 614);
+            this.Controls.Add(this.lblValuta);
+            this.Controls.Add(this.cmbBoxValuta);
             this.Controls.Add(this.lblCijenaPr);
             this.Controls.Add(this.lblNazivPr);
             this.Controls.Add(this.btnPromijeniPr);
@@ -193,5 +220,7 @@
         private System.Windows.Forms.Button btnUrediPr;
         private System.Windows.Forms.Button btnBrisiPr;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbBoxValuta;
+        private System.Windows.Forms.Label lblValuta;
     }
 }

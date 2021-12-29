@@ -74,7 +74,7 @@ namespace Skladiste_HMR
             string lozinka = txtLozinka.Text;
             string uloga = cmbBoxUloga.SelectedItem.ToString();
 
-            if (cmbBoxUloga.SelectedIndex > -1 && provjeraUnosa(ime) && provjeraUnosa(prezime)
+            if (uloga.Length > 0 && provjeraUnosa(ime) && provjeraUnosa(prezime)
                 && provjeraKorImena(korisnickoIme) && provjeraLozinke(lozinka))
             {
                 cmd = new SqlCommand("insert into Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga)" +
@@ -146,7 +146,7 @@ namespace Skladiste_HMR
             }
             else
             {
-                MessageBox.Show("please select record to delete");
+                MessageBox.Show("Odaberite korisnički račun za brisanje!");
             }
         }
         private void DisplayData()

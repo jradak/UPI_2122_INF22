@@ -35,19 +35,6 @@ Datum date not null
 primary key(ID_Narudzba)
 );
 
-
-
-//podaci
---KORISNIK--
-USE Skladiste
-
-DBCC CHECKIDENT("dbo.Korisnik", reseed, 0)
-insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Josipa', 'Radak', 'jradak98', '12345678', 'admin');
-insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Domagoj', 'Hlaca', 'dhlaca98', '12345678', 'admin');
-insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Marko', 'Kumir', 'mkumir00', '12345678', 'admin');
-insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Ivo', 'Ivic', 'ivo123', '12345678', 'poslovoda');
-insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Mate', 'Matic', 'mmatic05', '12345678', 'radnik');
-
 create table Isporuka(
 ID_Isporuka int identity(1,1) not null,
 Kolicina int not null,
@@ -61,4 +48,17 @@ foreign key(ID_Proizvod) references Proizvod(ID_Proizvod),
 foreign key(ID_Narudzba) references Narudzba(ID_Narudzba),
 foreign key(ID_Sektor) references SektorSkladista(ID_Sektor)
 );
+
+
+//podaci
+--KORISNIK--
+USE Skladiste
+
+DBCC CHECKIDENT("dbo.Korisnik", reseed, 0)
+insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Josipa', 'Radak', 'jradak98', '12345678', 'admin');
+insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Domagoj', 'Hlaca', 'dhlaca98', '12345678', 'admin');
+insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Marko', 'Kumir', 'mkumir00', '12345678', 'admin');
+insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Ivo', 'Ivic', 'ivo123', '12345678', 'poslovoda');
+insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Mate', 'Matic', 'mmatic05', '12345678', 'radnik');
+
 

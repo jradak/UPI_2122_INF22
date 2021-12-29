@@ -54,14 +54,16 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(56, 54);
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView1.Location = new System.Drawing.Point(51, 54);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(817, 331);
+            this.dataGridView1.Size = new System.Drawing.Size(995, 331);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
@@ -69,7 +71,7 @@
             // 
             this.btnBrisiKor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrisiKor.ForeColor = System.Drawing.Color.Salmon;
-            this.btnBrisiKor.Location = new System.Drawing.Point(229, 412);
+            this.btnBrisiKor.Location = new System.Drawing.Point(297, 412);
             this.btnBrisiKor.Name = "btnBrisiKor";
             this.btnBrisiKor.Size = new System.Drawing.Size(131, 58);
             this.btnBrisiKor.TabIndex = 1;
@@ -81,7 +83,7 @@
             // 
             this.btnUrediKor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUrediKor.ForeColor = System.Drawing.Color.Salmon;
-            this.btnUrediKor.Location = new System.Drawing.Point(599, 412);
+            this.btnUrediKor.Location = new System.Drawing.Point(667, 412);
             this.btnUrediKor.Name = "btnUrediKor";
             this.btnUrediKor.Size = new System.Drawing.Size(131, 58);
             this.btnUrediKor.TabIndex = 2;
@@ -93,7 +95,7 @@
             // 
             this.btnDodajKor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDodajKor.ForeColor = System.Drawing.Color.Salmon;
-            this.btnDodajKor.Location = new System.Drawing.Point(415, 412);
+            this.btnDodajKor.Location = new System.Drawing.Point(483, 412);
             this.btnDodajKor.Name = "btnDodajKor";
             this.btnDodajKor.Size = new System.Drawing.Size(131, 58);
             this.btnDodajKor.TabIndex = 3;
@@ -105,7 +107,7 @@
             // 
             this.txtIme.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIme.ForeColor = System.Drawing.Color.DimGray;
-            this.txtIme.Location = new System.Drawing.Point(336, 511);
+            this.txtIme.Location = new System.Drawing.Point(404, 511);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(210, 37);
             this.txtIme.TabIndex = 4;
@@ -114,7 +116,7 @@
             // 
             this.txtPrezime.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrezime.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPrezime.Location = new System.Drawing.Point(336, 554);
+            this.txtPrezime.Location = new System.Drawing.Point(404, 554);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(210, 37);
             this.txtPrezime.TabIndex = 5;
@@ -123,7 +125,7 @@
             // 
             this.txtKorIme.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKorIme.ForeColor = System.Drawing.Color.DimGray;
-            this.txtKorIme.Location = new System.Drawing.Point(336, 597);
+            this.txtKorIme.Location = new System.Drawing.Point(404, 597);
             this.txtKorIme.Name = "txtKorIme";
             this.txtKorIme.Size = new System.Drawing.Size(210, 37);
             this.txtKorIme.TabIndex = 6;
@@ -132,7 +134,7 @@
             // 
             this.txtLozinka.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLozinka.ForeColor = System.Drawing.Color.DimGray;
-            this.txtLozinka.Location = new System.Drawing.Point(336, 640);
+            this.txtLozinka.Location = new System.Drawing.Point(404, 640);
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(210, 37);
             this.txtLozinka.TabIndex = 7;
@@ -141,7 +143,7 @@
             // 
             this.btnSpremiKor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSpremiKor.ForeColor = System.Drawing.Color.Salmon;
-            this.btnSpremiKor.Location = new System.Drawing.Point(610, 585);
+            this.btnSpremiKor.Location = new System.Drawing.Point(678, 585);
             this.btnSpremiKor.Name = "btnSpremiKor";
             this.btnSpremiKor.Size = new System.Drawing.Size(136, 58);
             this.btnSpremiKor.TabIndex = 9;
@@ -153,7 +155,7 @@
             // 
             this.btnPromijeniKor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPromijeniKor.ForeColor = System.Drawing.Color.Salmon;
-            this.btnPromijeniKor.Location = new System.Drawing.Point(610, 585);
+            this.btnPromijeniKor.Location = new System.Drawing.Point(678, 585);
             this.btnPromijeniKor.Name = "btnPromijeniKor";
             this.btnPromijeniKor.Size = new System.Drawing.Size(136, 58);
             this.btnPromijeniKor.TabIndex = 10;
@@ -165,7 +167,7 @@
             // 
             this.lblIme.AutoSize = true;
             this.lblIme.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIme.Location = new System.Drawing.Point(251, 514);
+            this.lblIme.Location = new System.Drawing.Point(319, 514);
             this.lblIme.Name = "lblIme";
             this.lblIme.Size = new System.Drawing.Size(57, 29);
             this.lblIme.TabIndex = 11;
@@ -175,7 +177,7 @@
             // 
             this.lblPrezime.AutoSize = true;
             this.lblPrezime.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrezime.Location = new System.Drawing.Point(208, 557);
+            this.lblPrezime.Location = new System.Drawing.Point(276, 557);
             this.lblPrezime.Name = "lblPrezime";
             this.lblPrezime.Size = new System.Drawing.Size(100, 29);
             this.lblPrezime.TabIndex = 12;
@@ -185,7 +187,7 @@
             // 
             this.lblKorIme.AutoSize = true;
             this.lblKorIme.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKorIme.Location = new System.Drawing.Point(144, 600);
+            this.lblKorIme.Location = new System.Drawing.Point(212, 600);
             this.lblKorIme.Name = "lblKorIme";
             this.lblKorIme.Size = new System.Drawing.Size(164, 29);
             this.lblKorIme.TabIndex = 13;
@@ -195,7 +197,7 @@
             // 
             this.lblLozinka.AutoSize = true;
             this.lblLozinka.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLozinka.Location = new System.Drawing.Point(212, 643);
+            this.lblLozinka.Location = new System.Drawing.Point(280, 643);
             this.lblLozinka.Name = "lblLozinka";
             this.lblLozinka.Size = new System.Drawing.Size(96, 29);
             this.lblLozinka.TabIndex = 14;
@@ -205,7 +207,7 @@
             // 
             this.lblUloga.AutoSize = true;
             this.lblUloga.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUloga.Location = new System.Drawing.Point(227, 686);
+            this.lblUloga.Location = new System.Drawing.Point(295, 686);
             this.lblUloga.Name = "lblUloga";
             this.lblUloga.Size = new System.Drawing.Size(81, 29);
             this.lblUloga.TabIndex = 15;
@@ -219,7 +221,7 @@
             "admin",
             "poslovoda",
             "radnik"});
-            this.cmbBoxUloga.Location = new System.Drawing.Point(336, 683);
+            this.cmbBoxUloga.Location = new System.Drawing.Point(404, 683);
             this.cmbBoxUloga.Name = "cmbBoxUloga";
             this.cmbBoxUloga.Size = new System.Drawing.Size(210, 37);
             this.cmbBoxUloga.TabIndex = 16;
@@ -238,7 +240,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(926, 780);
+            this.ClientSize = new System.Drawing.Size(1102, 780);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbBoxUloga);
             this.Controls.Add(this.lblUloga);
@@ -257,6 +259,7 @@
             this.Controls.Add(this.btnBrisiKor);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form6";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form6";
             this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

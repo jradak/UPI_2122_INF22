@@ -56,7 +56,7 @@
             // 
             this.picBox_Planer.BackColor = System.Drawing.Color.White;
             this.picBox_Planer.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Planer.Image")));
-            this.picBox_Planer.Location = new System.Drawing.Point(162, 201);
+            this.picBox_Planer.Location = new System.Drawing.Point(162, 241);
             this.picBox_Planer.Name = "picBox_Planer";
             this.picBox_Planer.Size = new System.Drawing.Size(154, 152);
             this.picBox_Planer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -70,7 +70,7 @@
             // 
             this.picBox_Skladiste.BackColor = System.Drawing.Color.White;
             this.picBox_Skladiste.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Skladiste.Image")));
-            this.picBox_Skladiste.Location = new System.Drawing.Point(389, 201);
+            this.picBox_Skladiste.Location = new System.Drawing.Point(389, 241);
             this.picBox_Skladiste.Name = "picBox_Skladiste";
             this.picBox_Skladiste.Size = new System.Drawing.Size(154, 152);
             this.picBox_Skladiste.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -84,7 +84,7 @@
             // 
             this.picBox_Proizvodi.BackColor = System.Drawing.Color.White;
             this.picBox_Proizvodi.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Proizvodi.Image")));
-            this.picBox_Proizvodi.Location = new System.Drawing.Point(609, 201);
+            this.picBox_Proizvodi.Location = new System.Drawing.Point(609, 241);
             this.picBox_Proizvodi.Name = "picBox_Proizvodi";
             this.picBox_Proizvodi.Size = new System.Drawing.Size(154, 152);
             this.picBox_Proizvodi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,7 +112,7 @@
             this.lblKorIme.BackColor = System.Drawing.Color.Transparent;
             this.lblKorIme.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKorIme.ForeColor = System.Drawing.Color.White;
-            this.lblKorIme.Location = new System.Drawing.Point(620, 66);
+            this.lblKorIme.Location = new System.Drawing.Point(622, 68);
             this.lblKorIme.Name = "lblKorIme";
             this.lblKorIme.Size = new System.Drawing.Size(59, 24);
             this.lblKorIme.TabIndex = 4;
@@ -122,7 +122,7 @@
             // 
             this.Sjena1.BackColor = System.Drawing.Color.Transparent;
             this.Sjena1.Image = ((System.Drawing.Image)(resources.GetObject("Sjena1.Image")));
-            this.Sjena1.Location = new System.Drawing.Point(147, 190);
+            this.Sjena1.Location = new System.Drawing.Point(147, 230);
             this.Sjena1.Name = "Sjena1";
             this.Sjena1.Size = new System.Drawing.Size(190, 334);
             this.Sjena1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +134,7 @@
             // 
             this.Sjena2.BackColor = System.Drawing.Color.Transparent;
             this.Sjena2.Image = ((System.Drawing.Image)(resources.GetObject("Sjena2.Image")));
-            this.Sjena2.Location = new System.Drawing.Point(369, 190);
+            this.Sjena2.Location = new System.Drawing.Point(369, 230);
             this.Sjena2.Name = "Sjena2";
             this.Sjena2.Size = new System.Drawing.Size(190, 334);
             this.Sjena2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,7 +146,7 @@
             // 
             this.Sjena3.BackColor = System.Drawing.Color.Transparent;
             this.Sjena3.Image = ((System.Drawing.Image)(resources.GetObject("Sjena3.Image")));
-            this.Sjena3.Location = new System.Drawing.Point(588, 190);
+            this.Sjena3.Location = new System.Drawing.Point(588, 230);
             this.Sjena3.Name = "Sjena3";
             this.Sjena3.Size = new System.Drawing.Size(190, 334);
             this.Sjena3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,7 +159,7 @@
             this.btnOdjava.BackColor = System.Drawing.Color.White;
             this.btnOdjava.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdjava.ForeColor = System.Drawing.Color.Salmon;
-            this.btnOdjava.Location = new System.Drawing.Point(588, 119);
+            this.btnOdjava.Location = new System.Drawing.Point(588, 103);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(161, 41);
             this.btnOdjava.TabIndex = 8;
@@ -186,18 +186,18 @@
             this.lblInfoKorR.BackColor = System.Drawing.Color.White;
             this.lblInfoKorR.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoKorR.ForeColor = System.Drawing.Color.DimGray;
-            this.lblInfoKorR.Location = new System.Drawing.Point(371, 456);
+            this.lblInfoKorR.Location = new System.Drawing.Point(365, 454);
             this.lblInfoKorR.Name = "lblInfoKorR";
-            this.lblInfoKorR.Size = new System.Drawing.Size(178, 29);
+            this.lblInfoKorR.Size = new System.Drawing.Size(193, 29);
             this.lblInfoKorR.TabIndex = 17;
-            this.lblInfoKorR.Text = "Korisnički računi";
+            this.lblInfoKorR.Text = "  Korisnički računi ";
             this.lblInfoKorR.Visible = false;
             // 
             // picBox_Korisnici
             // 
             this.picBox_Korisnici.BackColor = System.Drawing.Color.White;
             this.picBox_Korisnici.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Korisnici.Image")));
-            this.picBox_Korisnici.Location = new System.Drawing.Point(389, 201);
+            this.picBox_Korisnici.Location = new System.Drawing.Point(389, 241);
             this.picBox_Korisnici.Name = "picBox_Korisnici";
             this.picBox_Korisnici.Size = new System.Drawing.Size(154, 152);
             this.picBox_Korisnici.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -224,7 +224,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(926, 562);
+            this.ClientSize = new System.Drawing.Size(926, 533);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblInfoKorR);
             this.Controls.Add(this.picBox_Korisnici);

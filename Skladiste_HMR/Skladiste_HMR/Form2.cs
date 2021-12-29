@@ -12,10 +12,12 @@ namespace Skladiste_HMR
 {
     public partial class Form2 : Form
     {
-        public Form2(string kime, string uloga)
+        string ulogaGlob = "";
+        public Form2(string ime, string uloga)
         {
+            ulogaGlob = uloga;
             InitializeComponent();
-            lblKorIme.Text = kime;
+            lblKorIme.Text = ime;
             if (uloga == "admin")
             {
                 picBox_Korisnici.Show();
@@ -34,7 +36,7 @@ namespace Skladiste_HMR
 
         private void picBox_Planer_Click(object sender, EventArgs e)
         {
-            Form4 fm4 = new Form4();
+            Form4 fm4 = new Form4(ulogaGlob);
             fm4.Show();
         }
 
@@ -69,7 +71,7 @@ namespace Skladiste_HMR
             lblInfoOdabir.Show();
             lblInfoOdabir.Text = "Skladište";
             //ovo je samo primjer
-            Form3 fm3 = new Form3();
+            Form3 fm3 = new Form3(ulogaGlob);
             fm3.Show();
         }
 
@@ -93,7 +95,7 @@ namespace Skladiste_HMR
             Sjena3.Show();
             lblInfoOdabir.Show();
             lblInfoOdabir.Text = "Proizvodi";
-            Form5 fm5 = new Form5();
+            Form5 fm5 = new Form5(ulogaGlob);
             fm5.Show();
         }
 

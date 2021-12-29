@@ -12,8 +12,10 @@ namespace Skladiste_HMR
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        string ulogaGlob = "";
+        public Form3(string uloga)
         {
+            ulogaGlob = uloga;
             InitializeComponent();
         }
 
