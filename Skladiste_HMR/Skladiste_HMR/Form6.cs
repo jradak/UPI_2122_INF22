@@ -17,38 +17,19 @@ namespace Skladiste_HMR
         SqlConnection con = new SqlConnection(Konstante.ConnectionString);
         SqlCommand cmd;
         SqlDataAdapter adapt;
+
         public Form6()
         {
             InitializeComponent();
         }
         private void Form6_Load(object sender, EventArgs e)
         {
+            CiscenjeProzora();
             btnBrisiKor.Hide();
             btnUrediKor.Hide();
-            btnSpremiKor.Hide();
-            btnPromijeniKor.Hide();
-            txtIme.Hide();
-            txtPrezime.Hide();
-            txtKorIme.Hide();
-            txtLozinka.Hide();
-            cmbBoxUloga.Hide();
-            lblIme.Hide();
-            lblPrezime.Hide();
-            lblKorIme.Hide();
-            lblLozinka.Hide();
-            lblUloga.Hide();
             try
             {
-                SqlConnection con = new SqlConnection(Konstante.ConnectionString);
-                SqlCommand cmd = new SqlCommand("Select * from Korisnik", con);
-                con.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                adapt.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
-
-                //close connection
-                con.Close();
+                DisplayData();
             }
             catch(Exception ex)
             {
@@ -58,20 +39,9 @@ namespace Skladiste_HMR
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            CiscenjeProzora();
             btnBrisiKor.Show();
             btnUrediKor.Show();
-            btnSpremiKor.Hide();
-            btnPromijeniKor.Hide();
-            txtIme.Hide();
-            txtPrezime.Hide();
-            txtKorIme.Hide();
-            txtLozinka.Hide();
-            cmbBoxUloga.Hide();
-            lblIme.Hide();
-            lblPrezime.Hide();
-            lblKorIme.Hide();
-            lblLozinka.Hide();
-            lblUloga.Hide();
             ID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             defIme = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             defPrezime = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -82,47 +52,18 @@ namespace Skladiste_HMR
 
         private void btnDodajKor_Click(object sender, EventArgs e)
         {
-            txtIme.Show();
-            txtPrezime.Show();
-            txtKorIme.Show();
-            txtLozinka.Show();
-            cmbBoxUloga.Show();
-            btnSpremiKor.Show();
-            btnPromijeniKor.Hide();
-
-            lblIme.Show();
-            lblPrezime.Show();
-            lblKorIme.Show();
-            lblLozinka.Show();
-            lblUloga.Show();
-
-            txtIme.Text = "";
-            txtPrezime.Text = "";
-            txtKorIme.Text = "";
-            txtLozinka.Text = "";
+            IsprazniBox();
+            PopuniProzor("dodavanje");
         }
 
         private void btnUrediKor_Click(object sender, EventArgs e)
         {
-            txtIme.Show();
-            txtPrezime.Show();
-            txtKorIme.Show();
-            txtLozinka.Show();
-            cmbBoxUloga.Show();
-            btnSpremiKor.Hide();
-            btnPromijeniKor.Show();
-
-            lblIme.Show();
-            lblPrezime.Show();
-            lblKorIme.Show();
-            lblLozinka.Show();
-            lblUloga.Show();
-
             txtIme.Text = defIme;
             txtPrezime.Text = defPrezime;
             txtKorIme.Text = defKorIme;
             txtLozinka.Text = defLozinka;
             cmbBoxUloga.Text = defUloga;
+            PopuniProzor("uredivanje");
         }
 
         private void btnSpremiKor_Click(object sender, EventArgs e)
@@ -148,13 +89,8 @@ namespace Skladiste_HMR
                 con.Close();
                 MessageBox.Show("Uspješno ste unijeli novog korisnika!");
                 DisplayData();
-                ClearData();
-
-                txtIme.Text = "";
-                txtPrezime.Text = "";
-                txtKorIme.Text = "";
-                txtLozinka.Text = "";
-                cmbBoxUloga.Text = "";
+                CiscenjeProzora();
+                IsprazniBox();
             }
             else
             {
@@ -186,7 +122,8 @@ namespace Skladiste_HMR
                 MessageBox.Show("Uspješno ste promijenili podatke o korisniku!");
                 con.Close();
                 DisplayData();
-                ClearData();
+                CiscenjeProzora();
+                IsprazniBox();
             }
             else
             {
@@ -205,7 +142,7 @@ namespace Skladiste_HMR
                 con.Close();
                 MessageBox.Show("Uspješno izbrisan korisnički račun!");
                 DisplayData();
-                ClearData();
+                CiscenjeProzora();
             }
             else
             {
@@ -221,10 +158,7 @@ namespace Skladiste_HMR
             dataGridView1.DataSource = dt;
             con.Close();
         }
-        private void ClearData()
-        {
-            ID = -1;
-        }
+        
         private bool provjeraUnosa(string unos)
         {
             if (unos.Length < 3)
@@ -267,6 +201,61 @@ namespace Skladiste_HMR
                 return false;
             }
             return true;
+        }
+
+        private void PopuniProzor(string vrsta)
+        {
+            if (vrsta == "dodavanje")
+            {
+                btnSpremiKor.Show();
+                btnPromijeniKor.Hide();
+            }
+            else if (vrsta == "uredivanje")
+            {
+                btnSpremiKor.Hide();
+                btnPromijeniKor.Show();
+            }
+            txtIme.Show();
+            txtPrezime.Show();
+            txtKorIme.Show();
+            txtLozinka.Show();
+            cmbBoxUloga.Show();
+
+            lblIme.Show();
+            lblPrezime.Show();
+            lblKorIme.Show();
+            lblLozinka.Show();
+            lblUloga.Show();
+
+            label1.Show();
+
+        }
+        private void CiscenjeProzora()
+        {
+            ID = -1;
+            btnSpremiKor.Hide();
+            btnPromijeniKor.Hide();
+            txtIme.Hide();
+            txtPrezime.Hide();
+            txtKorIme.Hide();
+            txtLozinka.Hide();
+            cmbBoxUloga.Hide();
+            lblIme.Hide();
+            lblPrezime.Hide();
+            lblKorIme.Hide();
+            lblLozinka.Hide();
+            lblUloga.Hide();
+            btnBrisiKor.Hide();
+            btnUrediKor.Hide();
+            label1.Hide();
+        }
+        private void IsprazniBox()
+        {
+            txtIme.Text = "";
+            txtPrezime.Text = "";
+            txtKorIme.Text = "";
+            txtLozinka.Text = "";
+            cmbBoxUloga.Text = "";
         }
     }
 }

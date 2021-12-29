@@ -118,7 +118,9 @@ namespace Skladiste_HMR
         
         private void btnOdjava_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             this.Hide();
+            GC.Collect();
             Form1 fm1 = new Form1();
             fm1.Show();
         }

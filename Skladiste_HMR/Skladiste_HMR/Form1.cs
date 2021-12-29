@@ -63,7 +63,6 @@ namespace Skladiste_HMR
 
                     MessageBox.Show("Usješno ste se prijavili!");
                     this.Hide();
-
                     Form2 fm2 = new Form2(kIme, k.Uloga);
                     fm2.Show();
                 }

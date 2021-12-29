@@ -44,6 +44,7 @@
             this.lblLozinka = new System.Windows.Forms.Label();
             this.lblUloga = new System.Windows.Forms.Label();
             this.cmbBoxUloga = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -223,6 +224,14 @@
             this.cmbBoxUloga.Size = new System.Drawing.Size(210, 37);
             this.cmbBoxUloga.TabIndex = 16;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(411, 751);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 20);
+            this.label1.TabIndex = 17;
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -230,6 +239,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(926, 780);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbBoxUloga);
             this.Controls.Add(this.lblUloga);
             this.Controls.Add(this.lblLozinka);
@@ -273,5 +283,6 @@
         private System.Windows.Forms.Label lblLozinka;
         private System.Windows.Forms.Label lblUloga;
         private System.Windows.Forms.ComboBox cmbBoxUloga;
+        private System.Windows.Forms.Label label1;
     }
 }
