@@ -41,6 +41,7 @@
             this.lblInfoOdabir = new System.Windows.Forms.Label();
             this.lblInfoKorR = new System.Windows.Forms.Label();
             this.picBox_Korisnici = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Planer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Skladiste)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Proizvodi)).BeginInit();
@@ -48,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Sjena2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Korisnici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // picBox_Planer
@@ -205,6 +207,17 @@
             this.picBox_Korisnici.MouseLeave += new System.EventHandler(this.picBox_Korisnici_MouseLeave);
             this.picBox_Korisnici.MouseHover += new System.EventHandler(this.picBox_Korisnici_MouseHover);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(162, -31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(226, 205);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -212,6 +225,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(926, 562);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblInfoKorR);
             this.Controls.Add(this.picBox_Korisnici);
             this.Controls.Add(this.lblInfoOdabir);
@@ -236,6 +250,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Sjena2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sjena3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Korisnici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +270,6 @@
         private System.Windows.Forms.Label lblInfoOdabir;
         private System.Windows.Forms.Label lblInfoKorR;
         private System.Windows.Forms.PictureBox picBox_Korisnici;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
