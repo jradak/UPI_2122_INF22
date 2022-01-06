@@ -8,15 +8,7 @@ namespace Skladiste_HMR
 {
     public partial class frmKorisnici : Form
     {
-        int ID = -1;
-        string defIme = "";
-        string defPrezime = "";
-        string defKorIme = "";
-        string defLozinka = "";
-        string defUloga = "";
-        SqlConnection con = new SqlConnection(Konstante.ConnectionString);
-        SqlCommand cmd;
-        SqlDataAdapter adapt;
+        Korisnik korisnik = new Korisnik(-1, null, null, null, null, null);
 
         public frmKorisnici()
         {
@@ -29,9 +21,9 @@ namespace Skladiste_HMR
             btnUrediKor.Hide();
             try
             {
-                DisplayData();
+                korisnik.PrikazKorisnika(dataGridView1);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -42,12 +34,12 @@ namespace Skladiste_HMR
             CiscenjeProzora();
             btnBrisiKor.Show();
             btnUrediKor.Show();
-            ID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-            defIme = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            defPrezime = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            defKorIme = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            defLozinka = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            defUloga = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            korisnik.Id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            korisnik.Ime = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            korisnik.Prezime = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            korisnik.KorisnickoIme = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            korisnik.Lozinka = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            korisnik.Uloga = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
 
         private void btnDodajKor_Click(object sender, EventArgs e)
@@ -58,11 +50,11 @@ namespace Skladiste_HMR
 
         private void btnUrediKor_Click(object sender, EventArgs e)
         {
-            txtIme.Text = defIme;
-            txtPrezime.Text = defPrezime;
-            txtKorIme.Text = defKorIme;
-            txtLozinka.Text = defLozinka;
-            cmbBoxUloga.Text = defUloga;
+            txtIme.Text = korisnik.Ime;
+            txtPrezime.Text = korisnik.Prezime;
+            txtKorIme.Text = korisnik.KorisnickoIme;
+            txtLozinka.Text = korisnik.Lozinka;
+            cmbBoxUloga.Text = korisnik.Uloga;
             PopuniProzor("uredivanje");
         }
 
@@ -74,22 +66,13 @@ namespace Skladiste_HMR
             string lozinka = txtLozinka.Text;
             
 
-            if (cmbBoxUloga.SelectedIndex > -1 && provjeraUnosa(ime) && provjeraUnosa(prezime)
-                && provjeraKorImena(korisnickoIme) && provjeraLozinke(lozinka))
+            if (cmbBoxUloga.SelectedIndex > -1 && Provjere.ProvjeraUnosa(ime) && Provjere.ProvjeraUnosa(prezime)
+                && Provjere.ProvjeraKorImena(korisnickoIme) && Provjere.ProvjeraLozinke(lozinka))
             {
                 string uloga = cmbBoxUloga.SelectedItem.ToString();
-                cmd = new SqlCommand("insert into Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga)" +
-                    " values(@ime, @prezime, @kIme, @lozinka, @uloga)", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@ime", ime);
-                cmd.Parameters.AddWithValue("@prezime", prezime);
-                cmd.Parameters.AddWithValue("@kIme", korisnickoIme);
-                cmd.Parameters.AddWithValue("@lozinka", lozinka);
-                cmd.Parameters.AddWithValue("@uloga", uloga);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                korisnik.DodavanjeKorisnika(ime, prezime, korisnickoIme, lozinka, uloga);
                 MessageBox.Show("Uspješno ste unijeli novog korisnika!");
-                DisplayData();
+                korisnik.PrikazKorisnika(dataGridView1);
                 CiscenjeProzora();
                 IsprazniBox();
             }
@@ -107,22 +90,12 @@ namespace Skladiste_HMR
             string lozinka = txtLozinka.Text;
             string uloga = cmbBoxUloga.SelectedItem.ToString();
 
-            if (cmbBoxUloga.SelectedIndex > -1 && provjeraUnosa(ime) && provjeraUnosa(prezime)
-                && provjeraKorImena(korisnickoIme) && provjeraLozinke(lozinka))
+            if (cmbBoxUloga.SelectedIndex > -1 && Provjere.ProvjeraUnosa(ime) && Provjere.ProvjeraUnosa(prezime)
+                && Provjere.ProvjeraKorImena(korisnickoIme) && Provjere.ProvjeraLozinke(lozinka))
             {
-                cmd = new SqlCommand("update Korisnik set Ime=@ime,Prezime=@prezime, KorisnickoIme=@kIme, " +
-                    "Lozinka=@lozinka,Uloga=@uloga where ID_Korisnik=@id", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@id", ID);
-                cmd.Parameters.AddWithValue("@ime", ime);
-                cmd.Parameters.AddWithValue("@prezime", prezime);
-                cmd.Parameters.AddWithValue("@kIme", korisnickoIme);
-                cmd.Parameters.AddWithValue("@lozinka", lozinka);
-                cmd.Parameters.AddWithValue("@uloga", uloga);
-                cmd.ExecuteNonQuery();
+                korisnik.UredivanjeKorisnika(korisnik.Id, ime, prezime, korisnickoIme, lozinka, uloga);
                 MessageBox.Show("Uspješno ste promijenili podatke o korisniku!");
-                con.Close();
-                DisplayData();
+                korisnik.PrikazKorisnika(dataGridView1);
                 CiscenjeProzora();
                 IsprazniBox();
             }
@@ -134,15 +107,11 @@ namespace Skladiste_HMR
 
         private void btnBrisiKor_Click(object sender, EventArgs e)
         {
-            if (ID != -1)
+            if (korisnik.Id != -1)
             {
-                cmd = new SqlCommand("delete Korisnik where ID_Korisnik=@id", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@id", ID);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                korisnik.BrisanjeKorisnika(korisnik.Id);
                 MessageBox.Show("Uspješno izbrisan korisnički račun!");
-                DisplayData();
+                korisnik.PrikazKorisnika(dataGridView1);
                 CiscenjeProzora();
             }
             else
@@ -150,60 +119,7 @@ namespace Skladiste_HMR
                 MessageBox.Show("Odaberite korisnički račun za brisanje!");
             }
         }
-        private void DisplayData()
-        {
-            con.Open();
-            DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("select * from Korisnik", con);
-            adapt.Fill(dt);
-            dataGridView1.DataSource = dt;
-            con.Close();
-        }
         
-        private bool provjeraUnosa(string unos)
-        {
-            if (unos.Length < 3)
-            {
-                return false;
-            }
-            if (!Char.IsLetter(unos, 0) || Char.IsLower(unos, 0))
-            {
-                return false;
-            }
-            for (int i = 1; i < unos.Length; i++)
-            {
-                if (!Char.IsLetter(unos, i) || Char.IsUpper(unos, i))
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-        private bool provjeraKorImena(string unos)
-        {
-            if (unos.Length < 3)
-            {
-                return false;
-            }
-            foreach (char znak in unos)
-            {
-                if (!Char.IsLetterOrDigit(znak) || Char.IsUpper(znak))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-        private bool provjeraLozinke(string unos)
-        {
-            if (unos.Length < 7)
-            {
-                return false;
-            }
-            return true;
-        }
-
         private void PopuniProzor(string vrsta)
         {
             if (vrsta == "dodavanje")
@@ -233,7 +149,7 @@ namespace Skladiste_HMR
         }
         private void CiscenjeProzora()
         {
-            ID = -1;
+            korisnik.Id = -1;
             btnSpremiKor.Hide();
             btnPromijeniKor.Hide();
             txtIme.Hide();

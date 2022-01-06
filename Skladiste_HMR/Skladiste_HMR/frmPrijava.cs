@@ -14,6 +14,7 @@ namespace Skladiste_HMR
 {
     public partial class frmPrijava : Form
     {
+        Korisnik korisnik = new Korisnik(-1, null, null, null, null, null);
         public frmPrijava()
         {
             InitializeComponent();
@@ -31,35 +32,16 @@ namespace Skladiste_HMR
             }
             try
             {
-                //string queryPorslijedivanje = "Select KorisnickoIme, Uloga from Korisnik where korisnickoIme=@kIme and Lozinka=@lozinka";
-
-                SqlConnection con = new SqlConnection(Konstante.ConnectionString);
-                SqlCommand cmd = new SqlCommand("Select * from Korisnik where KorisnickoIme=@kIme and Lozinka=@lozinka", con);
-                cmd.Parameters.AddWithValue("@kIme", kIme);
-                cmd.Parameters.AddWithValue("@lozinka", lozinka);
-                con.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                DataTable dt = new DataTable();
-                adapt.Fill(ds);
-                adapt.Fill(dt);
-                con.Close();
-                int count = ds.Tables[0].Rows.Count;
-                
-                //If count is equal to 1, than show frmMain form
-                if (count == 1)
+                bool korisnikPostoji = korisnik.PostojanostKorisnika(kIme, lozinka);
+                if (korisnikPostoji)
                 {
-                    int id = int.Parse(dt.Rows[0]["ID_Korisnik"].ToString());
-                    string ime = dt.Rows[0]["Ime"].ToString();
-                    string pr = dt.Rows[0]["Prezime"].ToString();
-                    string korIme = dt.Rows[0]["KorisnickoIme"].ToString();
-                    string loz = dt.Rows[0]["Lozinka"].ToString();
-                    string uloga = dt.Rows[0]["Uloga"].ToString();
+                    string[] nizPodataka = korisnik.DohvatiPodatkeZaPrijavu(kIme, lozinka);
 
-                    Korisnik k = new Korisnik(id, ime, pr, korIme, loz, uloga);
+                    korisnik = new Korisnik(int.Parse(nizPodataka[0]), nizPodataka[1], nizPodataka[2],
+                        nizPodataka[3], nizPodataka[4], nizPodataka[5]);
                     MessageBox.Show("Usješno ste se prijavili!");
                     this.Hide();
-                    frmPocetna pocetna = new frmPocetna(ime, uloga );
+                    frmPocetna pocetna = new frmPocetna(korisnik);
                     pocetna.Show();
                 }
                 else

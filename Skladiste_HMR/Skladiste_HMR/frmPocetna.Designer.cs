@@ -56,7 +56,7 @@
             // 
             this.picBox_Planer.BackColor = System.Drawing.Color.White;
             this.picBox_Planer.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Planer.Image")));
-            this.picBox_Planer.Location = new System.Drawing.Point(162, 242);
+            this.picBox_Planer.Location = new System.Drawing.Point(163, 294);
             this.picBox_Planer.Name = "picBox_Planer";
             this.picBox_Planer.Size = new System.Drawing.Size(154, 152);
             this.picBox_Planer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -70,7 +70,7 @@
             // 
             this.picBox_Skladiste.BackColor = System.Drawing.Color.White;
             this.picBox_Skladiste.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Skladiste.Image")));
-            this.picBox_Skladiste.Location = new System.Drawing.Point(388, 242);
+            this.picBox_Skladiste.Location = new System.Drawing.Point(389, 294);
             this.picBox_Skladiste.Name = "picBox_Skladiste";
             this.picBox_Skladiste.Size = new System.Drawing.Size(154, 152);
             this.picBox_Skladiste.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -84,7 +84,7 @@
             // 
             this.picBox_Proizvodi.BackColor = System.Drawing.Color.White;
             this.picBox_Proizvodi.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Proizvodi.Image")));
-            this.picBox_Proizvodi.Location = new System.Drawing.Point(609, 242);
+            this.picBox_Proizvodi.Location = new System.Drawing.Point(610, 294);
             this.picBox_Proizvodi.Name = "picBox_Proizvodi";
             this.picBox_Proizvodi.Size = new System.Drawing.Size(154, 152);
             this.picBox_Proizvodi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +122,7 @@
             // 
             this.Sjena1.BackColor = System.Drawing.Color.Transparent;
             this.Sjena1.Image = ((System.Drawing.Image)(resources.GetObject("Sjena1.Image")));
-            this.Sjena1.Location = new System.Drawing.Point(147, 229);
+            this.Sjena1.Location = new System.Drawing.Point(148, 281);
             this.Sjena1.Name = "Sjena1";
             this.Sjena1.Size = new System.Drawing.Size(190, 334);
             this.Sjena1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +134,7 @@
             // 
             this.Sjena2.BackColor = System.Drawing.Color.Transparent;
             this.Sjena2.Image = ((System.Drawing.Image)(resources.GetObject("Sjena2.Image")));
-            this.Sjena2.Location = new System.Drawing.Point(369, 229);
+            this.Sjena2.Location = new System.Drawing.Point(370, 281);
             this.Sjena2.Name = "Sjena2";
             this.Sjena2.Size = new System.Drawing.Size(190, 334);
             this.Sjena2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,7 +146,7 @@
             // 
             this.Sjena3.BackColor = System.Drawing.Color.Transparent;
             this.Sjena3.Image = ((System.Drawing.Image)(resources.GetObject("Sjena3.Image")));
-            this.Sjena3.Location = new System.Drawing.Point(588, 229);
+            this.Sjena3.Location = new System.Drawing.Point(589, 281);
             this.Sjena3.Name = "Sjena3";
             this.Sjena3.Size = new System.Drawing.Size(190, 334);
             this.Sjena3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -173,7 +173,7 @@
             this.lblInfoOdabir.BackColor = System.Drawing.Color.White;
             this.lblInfoOdabir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoOdabir.ForeColor = System.Drawing.Color.DimGray;
-            this.lblInfoOdabir.Location = new System.Drawing.Point(417, 437);
+            this.lblInfoOdabir.Location = new System.Drawing.Point(407, 506);
             this.lblInfoOdabir.Name = "lblInfoOdabir";
             this.lblInfoOdabir.Size = new System.Drawing.Size(38, 29);
             this.lblInfoOdabir.TabIndex = 9;
@@ -186,7 +186,7 @@
             this.lblInfoKorR.BackColor = System.Drawing.Color.White;
             this.lblInfoKorR.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoKorR.ForeColor = System.Drawing.Color.DimGray;
-            this.lblInfoKorR.Location = new System.Drawing.Point(364, 454);
+            this.lblInfoKorR.Location = new System.Drawing.Point(365, 506);
             this.lblInfoKorR.Name = "lblInfoKorR";
             this.lblInfoKorR.Size = new System.Drawing.Size(193, 29);
             this.lblInfoKorR.TabIndex = 17;
@@ -197,7 +197,7 @@
             // 
             this.picBox_Korisnici.BackColor = System.Drawing.Color.White;
             this.picBox_Korisnici.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Korisnici.Image")));
-            this.picBox_Korisnici.Location = new System.Drawing.Point(388, 242);
+            this.picBox_Korisnici.Location = new System.Drawing.Point(389, 294);
             this.picBox_Korisnici.Name = "picBox_Korisnici";
             this.picBox_Korisnici.Size = new System.Drawing.Size(154, 152);
             this.picBox_Korisnici.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -243,7 +243,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Početna";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
-            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Planer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Skladiste)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Proizvodi)).EndInit();

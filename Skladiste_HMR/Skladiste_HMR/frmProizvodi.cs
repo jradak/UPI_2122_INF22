@@ -8,18 +8,14 @@ namespace Skladiste_HMR
     public partial class frmProizvodi : Form
     {
 
-        string ulogaGlob = "";
-        SqlConnection con = new SqlConnection(Konstante.ConnectionString);
-        SqlCommand cmd;
-        SqlDataAdapter adapt;
-        int ID = -1;
-        string defProizvod = "";
-        string defCijena = "";
-        double cijena_def = 0;
+        Korisnik korisnik;
+        Proizvod def_proizvod = new Proizvod(null, null, -1);
         string valuta_def = "";
-        public frmProizvodi(string uloga)
+        double cijena_def = 0;
+    
+        public frmProizvodi(Korisnik k)
         {
-            ulogaGlob = uloga;
+            korisnik = k;
             InitializeComponent();
         }
         private void Form5_Load(object sender, EventArgs e)
@@ -27,13 +23,13 @@ namespace Skladiste_HMR
             CiscenjeProzora();
             btnBrisiPr.Hide();
             btnUrediPr.Hide();
-            if (ulogaGlob == "radnik")
+            if (korisnik.Uloga == "radnik")
             {
                 btnDodajPr.Hide();
             }
             try
             {
-                DisplayData();
+                def_proizvod.PrikazProizvoda(dataGridView1);
             }
             catch (Exception ex)
             {
@@ -43,27 +39,39 @@ namespace Skladiste_HMR
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (ulogaGlob == "poslovoda")
+            IsprazniBox();
+            if (korisnik.Uloga == "poslovoda")
             {
                 btnBrisiPr.Show();
                 btnUrediPr.Show();
                 CiscenjeProzora();
                 IsprazniBox();
             }
-            ID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-            defProizvod = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            defCijena = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            def_proizvod.Id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            def_proizvod.Naziv = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            def_proizvod.Cijena = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             PodjelaCijene();
         }
 
         private void btnBrisiPr_Click(object sender, EventArgs e)
         {
-            if (ID != -1)
+            if (def_proizvod.Id != -1)
             {
-                BrisanjeProizvoda(ID);
-                MessageBox.Show("Uspješno izbrisan proizvod!");
-                DisplayData();
-                CiscenjeProzora();
+                DialogResult result = MessageBox.Show("Prilikom brisanja proizvoda, " +
+                    "izbrisat će se i pripadajuće isporuke! Jeste li sigurni da želite izbrisati proizvod?",
+                    "Upozorenje", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    def_proizvod.brisanjeProizvoda(def_proizvod.Id);
+
+                    MessageBox.Show("Uspješno izbrisan proizvod!");
+                    def_proizvod.PrikazProizvoda(dataGridView1);
+                    CiscenjeProzora();
+                }
+                else
+                {
+                    return;
+                }
             }
             else
             {
@@ -86,7 +94,7 @@ namespace Skladiste_HMR
             btnPromijeniPr.Show();
             btnSpremiPr.Hide();
 
-            txtNazivPr.Text = defProizvod;
+            txtNazivPr.Text = def_proizvod.Naziv;
             txtCijenaPr.Text = cijena_def.ToString();
             cmbBoxValuta.Text = valuta_def;
         }
@@ -96,19 +104,13 @@ namespace Skladiste_HMR
             string proizvod = txtNazivPr.Text;
             string cijena = txtCijenaPr.Text;
             
-            if (cmbBoxValuta.SelectedIndex > -1 && ProvjeraUnosa(proizvod) && ProvjeraCijene(cijena))
+            if (cmbBoxValuta.SelectedIndex > -1 && Provjere.KratkaProvjeraUnosa(proizvod) && Provjere.ProvjeraCijene(cijena))
             {
                 string valuta = cmbBoxValuta.SelectedItem.ToString();
-                cmd = new SqlCommand("update Proizvod set Naziv=@naziv, Cijena=@cijena" +
-                    " where ID_Proizvod=@id", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@id", ID);
-                cmd.Parameters.AddWithValue("@naziv", proizvod);
-                cmd.Parameters.AddWithValue("@cijena", cijena + " " + valuta);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                def_proizvod.UredivanjeProizvoda(def_proizvod.Id, proizvod, cijena + " " + valuta);
+
                 MessageBox.Show("Uspješno ste promijenili podatke o proizvodu!");
-                DisplayData();
+                def_proizvod.PrikazProizvoda(dataGridView1);
                 CiscenjeProzora();
                 IsprazniBox();
             }
@@ -123,19 +125,14 @@ namespace Skladiste_HMR
             string proizvod = txtNazivPr.Text;
             string cijena = txtCijenaPr.Text;
             
-            if (cmbBoxValuta.SelectedIndex > -1 && ProvjeraUnosa(proizvod) && ProvjeraCijene(cijena))
+            if (cmbBoxValuta.SelectedIndex > -1 && Provjere.KratkaProvjeraUnosa(proizvod) && Provjere.ProvjeraCijene(cijena))
             {
                 string valuta = cmbBoxValuta.SelectedItem.ToString();
-               
-                cmd = new SqlCommand("insert into Proizvod(Naziv, Cijena)" +
-                    " values(@naziv, @cijena)", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@naziv", proizvod);
-                cmd.Parameters.AddWithValue("@cijena", cijena+" "+valuta);
-                cmd.ExecuteNonQuery();
-                con.Close();
+
+                def_proizvod.DodavanjeProizvoda(proizvod, cijena + " " + valuta);
+
                 MessageBox.Show("Uspješno ste unijeli novi proizvod!");
-                DisplayData();
+                def_proizvod.PrikazProizvoda(dataGridView1);
                 CiscenjeProzora();
                 IsprazniBox();
             }
@@ -145,52 +142,9 @@ namespace Skladiste_HMR
             }
         }
 
-        private bool ProvjeraProizvoda(int id)
-        {
-            cmd = new SqlCommand("Select * from Isporuka where ID_Proizvod=@id", con);
-            cmd.Parameters.AddWithValue("@id", id);
-            con.Open();
-            adapt = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            adapt.Fill(ds);
-            con.Close();
-            int count = ds.Tables[0].Rows.Count;
-            if (count > 0)
-            {
-                return false;
-            }
-            return true;
-        }
-
-        private void BrisanjeProizvoda(int id)
-        {
-            if (!ProvjeraProizvoda(id))
-            {
-                SqlCommand cmdPomocna = new SqlCommand("delete Isporuka where ID_Proizvod=@id", con);
-                con.Open();
-                cmdPomocna.Parameters.AddWithValue("@id", id);
-                cmdPomocna.ExecuteNonQuery();
-                con.Close();
-            }
-            cmd = new SqlCommand("delete Proizvod where ID_Proizvod=@id", con);
-            con.Open();
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.ExecuteNonQuery();
-            con.Close();
-        }
-
-        private void DisplayData()
-        {
-            con.Open();
-            DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("Select * from Proizvod", con);
-            adapt.Fill(dt);
-            dataGridView1.DataSource = dt;
-            con.Close();
-        }
         private void CiscenjeProzora()
         {
-            ID = -1;
+            def_proizvod.Id = -1;
             btnSpremiPr.Hide();
             btnPromijeniPr.Hide();
             txtNazivPr.Hide();
@@ -218,7 +172,7 @@ namespace Skladiste_HMR
         private void PodjelaCijene()
         {
             string pomocna = "";
-            foreach (char znak in defCijena)
+            foreach (char znak in def_proizvod.Cijena)
             {
                 if (Char.IsDigit(znak) || znak == '.' || znak == ',')
                 {
@@ -237,29 +191,6 @@ namespace Skladiste_HMR
                 }
             }
             cijena_def = double.Parse(pomocna);
-        }
-
-        private bool ProvjeraUnosa(string unos)
-        {
-            if (unos.Length < 3 || unos.Length > 50)
-            {
-                return false;
-            }
-            return true;
-        }
-        private bool ProvjeraCijene(string cijena)
-        {
-            if (cijena.Length < 1)
-            {
-                return false;
-            }
-            double pomocna = 0;
-            bool uspjeh = double.TryParse(cijena, out pomocna);
-            if (!uspjeh)
-            {
-                return false;
-            }
-            return true;
         }
     }
 }

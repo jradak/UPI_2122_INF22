@@ -12,13 +12,14 @@ namespace Skladiste_HMR
 {
     public partial class frmPocetna : Form
     {
-        string ulogaGlob = "";
-        public frmPocetna(string ime, string uloga)
+        Korisnik korisnik;
+
+        public frmPocetna(Korisnik k)
         {
-            ulogaGlob = uloga;
+            korisnik = k;
             InitializeComponent();
-            lblKorIme.Text = ime;
-            if (uloga == "admin")
+            lblKorIme.Text = korisnik.Ime;
+            if (korisnik.Uloga == "admin")
             {
                 picBox_Korisnici.Show();
                 picBox_Planer.Hide();
@@ -36,7 +37,7 @@ namespace Skladiste_HMR
 
         private void picBox_Planer_Click(object sender, EventArgs e)
         {
-            frmPlaner planer = new frmPlaner(ulogaGlob);
+            frmPlaner planer = new frmPlaner(korisnik);
             planer.Show();
         }
 
@@ -71,7 +72,7 @@ namespace Skladiste_HMR
             lblInfoOdabir.Show();
             lblInfoOdabir.Text = "Skladište";
             //ovo je samo primjer
-            frmSkladiste skladiste = new frmSkladiste(ulogaGlob);
+            frmSkladiste skladiste = new frmSkladiste(korisnik);
             skladiste.Show();
         }
 
@@ -88,14 +89,12 @@ namespace Skladiste_HMR
             lblInfoOdabir.Text = "Proizvodi";
         }
 
-        
-
         private void picBox_Proizvodi_Click(object sender, EventArgs e)
         {
             Sjena3.Show();
             lblInfoOdabir.Show();
             lblInfoOdabir.Text = "Proizvodi";
-            frmProizvodi proizvodi = new frmProizvodi(ulogaGlob);
+            frmProizvodi proizvodi = new frmProizvodi(korisnik);
             proizvodi.Show();
         }
 
@@ -130,11 +129,6 @@ namespace Skladiste_HMR
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

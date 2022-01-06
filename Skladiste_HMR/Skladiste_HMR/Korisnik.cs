@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Skladiste_HMR
 {
-    class Korisnik
+    public class Korisnik
     {
         private int id;
         private string ime;
