@@ -61,6 +61,7 @@
             this.btnGotoveIsporuke.TabIndex = 47;
             this.btnGotoveIsporuke.Text = "gotove isporuke";
             this.btnGotoveIsporuke.UseVisualStyleBackColor = true;
+            this.btnGotoveIsporuke.Click += new System.EventHandler(this.btnGotoveIsporuke_Click);
             // 
             // btnUrediSkladiste
             // 
@@ -83,6 +84,7 @@
             this.btnPrimjeni.TabIndex = 45;
             this.btnPrimjeni.Text = "PRIMJENI";
             this.btnPrimjeni.UseVisualStyleBackColor = true;
+            this.btnPrimjeni.Click += new System.EventHandler(this.btnPrimjeni_Click);
             // 
             // cmbBoxSektor
             // 
@@ -157,6 +159,7 @@
             this.btnBrisi.TabIndex = 38;
             this.btnBrisi.Text = "BRIŠI";
             this.btnBrisi.UseVisualStyleBackColor = true;
+            this.btnBrisi.Click += new System.EventHandler(this.btnBrisi_Click);
             // 
             // btnUredi
             // 
@@ -168,6 +171,7 @@
             this.btnUredi.TabIndex = 37;
             this.btnUredi.Text = "UREDI";
             this.btnUredi.UseVisualStyleBackColor = true;
+            this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
             // 
             // btnNedefinirani
             // 
@@ -177,6 +181,7 @@
             this.btnNedefinirani.TabIndex = 36;
             this.btnNedefinirani.Text = "nesvrstani";
             this.btnNedefinirani.UseVisualStyleBackColor = true;
+            this.btnNedefinirani.Click += new System.EventHandler(this.btnNedefinirani_Click);
             // 
             // panel1
             // 
@@ -198,6 +203,7 @@
             this.btnSektorE.TabIndex = 4;
             this.btnSektorE.Text = "E";
             this.btnSektorE.UseVisualStyleBackColor = true;
+            this.btnSektorE.Click += new System.EventHandler(this.btnSektorE_Click);
             // 
             // btnSektorD
             // 
@@ -207,6 +213,7 @@
             this.btnSektorD.TabIndex = 3;
             this.btnSektorD.Text = "D";
             this.btnSektorD.UseVisualStyleBackColor = true;
+            this.btnSektorD.Click += new System.EventHandler(this.btnSektorD_Click);
             // 
             // btnSektorC
             // 
@@ -216,6 +223,7 @@
             this.btnSektorC.TabIndex = 2;
             this.btnSektorC.Text = "C";
             this.btnSektorC.UseVisualStyleBackColor = true;
+            this.btnSektorC.Click += new System.EventHandler(this.btnSektorC_Click);
             // 
             // btnSektorB
             // 
@@ -225,6 +233,7 @@
             this.btnSektorB.TabIndex = 1;
             this.btnSektorB.Text = "B";
             this.btnSektorB.UseVisualStyleBackColor = true;
+            this.btnSektorB.Click += new System.EventHandler(this.btnSektorB_Click);
             // 
             // btnSektorA
             // 
@@ -234,6 +243,7 @@
             this.btnSektorA.TabIndex = 0;
             this.btnSektorA.Text = "A";
             this.btnSektorA.UseVisualStyleBackColor = true;
+            this.btnSektorA.Click += new System.EventHandler(this.btnSektorA_Click);
             // 
             // dataGridView1
             // 
@@ -248,6 +258,7 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1033, 310);
             this.dataGridView1.TabIndex = 34;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // frmSkladiste
             // 
