@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Skladiste_HMR
 {
-    public partial class Form4 : Form
+    public partial class frmPlaner : Form
     {
         string ulogaGlob = "";
         SqlConnection con = new SqlConnection(Konstante.ConnectionString);
@@ -18,7 +18,7 @@ namespace Skladiste_HMR
 
         string ID_Narudzba = "";
 
-        public Form4(string uloga)
+        public frmPlaner(string uloga)
         {
             ulogaGlob = uloga;
             InitializeComponent();
@@ -114,8 +114,8 @@ namespace Skladiste_HMR
                 DisplayDataNarudzbe();
                 CiscenjeProzora();
               
-                Form7 fm7 = new Form7(ID_Narudzba);
-                fm7.Show();
+                frmIsporuke isporuke = new frmIsporuke(ID_Narudzba);
+                isporuke.Show();
             }
 
         }
@@ -187,8 +187,8 @@ namespace Skladiste_HMR
 
         private void dataGridViewNar_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            Form7 fm7 = new Form7(ID.ToString());
-            fm7.Show();
+            frmIsporuke isporuke = new frmIsporuke(ID.ToString());
+            isporuke.Show();
         }
     }
     

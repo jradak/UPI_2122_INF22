@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace Skladiste_HMR
 {
-    public partial class Form6 : Form
+    public partial class frmKorisnici : Form
     {
         int ID = -1;
         string defIme = "";
@@ -18,7 +18,7 @@ namespace Skladiste_HMR
         SqlCommand cmd;
         SqlDataAdapter adapt;
 
-        public Form6()
+        public frmKorisnici()
         {
             InitializeComponent();
         }

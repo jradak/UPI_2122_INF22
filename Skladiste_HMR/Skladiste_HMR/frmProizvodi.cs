@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace Skladiste_HMR
 {
-    public partial class Form5 : Form
+    public partial class frmProizvodi : Form
     {
 
         string ulogaGlob = "";
@@ -17,7 +17,7 @@ namespace Skladiste_HMR
         string defCijena = "";
         double cijena_def = 0;
         string valuta_def = "";
-        public Form5(string uloga)
+        public frmProizvodi(string uloga)
         {
             ulogaGlob = uloga;
             InitializeComponent();

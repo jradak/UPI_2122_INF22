@@ -12,9 +12,9 @@ using System.Data.Common;
 
 namespace Skladiste_HMR
 {
-    public partial class Form1 : Form
+    public partial class frmPrijava : Form
     {
-        public Form1()
+        public frmPrijava()
         {
             InitializeComponent();
         }
@@ -49,18 +49,18 @@ namespace Skladiste_HMR
                 //If count is equal to 1, than show frmMain form
                 if (count == 1)
                 {
+                    int id = int.Parse(dt.Rows[0]["ID_Korisnik"].ToString());
                     string ime = dt.Rows[0]["Ime"].ToString();
                     string pr = dt.Rows[0]["Prezime"].ToString();
                     string korIme = dt.Rows[0]["KorisnickoIme"].ToString();
                     string loz = dt.Rows[0]["Lozinka"].ToString();
                     string uloga = dt.Rows[0]["Uloga"].ToString();
 
-                    Korisnik k = new Korisnik(ime, pr, korIme, loz, uloga);
-
+                    Korisnik k = new Korisnik(id, ime, pr, korIme, loz, uloga);
                     MessageBox.Show("Usješno ste se prijavili!");
                     this.Hide();
-                    Form2 fm2 = new Form2(ime, uloga );
-                    fm2.Show();
+                    frmPocetna pocetna = new frmPocetna(ime, uloga );
+                    pocetna.Show();
                 }
                 else
                 {

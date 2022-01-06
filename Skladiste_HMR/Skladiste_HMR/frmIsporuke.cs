@@ -5,14 +5,14 @@ using System.Data.SqlClient;
 
 namespace Skladiste_HMR
 {
-    public partial class Form7 : Form
+    public partial class frmIsporuke : Form
     {
         string ID_Narudzba = "";
         SqlConnection con = new SqlConnection(Konstante.ConnectionString);
         SqlCommand cmd;
         SqlDataAdapter adapt;
         
-        public Form7(string id_n)
+        public frmIsporuke(string id_n)
         {
             ID_Narudzba = id_n;
             InitializeComponent();

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Skladiste_HMR
 {
-    public partial class Form2 : Form
+    public partial class frmPocetna : Form
     {
         string ulogaGlob = "";
-        public Form2(string ime, string uloga)
+        public frmPocetna(string ime, string uloga)
         {
             ulogaGlob = uloga;
             InitializeComponent();
@@ -36,8 +36,8 @@ namespace Skladiste_HMR
 
         private void picBox_Planer_Click(object sender, EventArgs e)
         {
-            Form4 fm4 = new Form4(ulogaGlob);
-            fm4.Show();
+            frmPlaner planer = new frmPlaner(ulogaGlob);
+            planer.Show();
         }
 
         private void picBox_Planer_MouseHover(object sender, EventArgs e)
@@ -71,8 +71,8 @@ namespace Skladiste_HMR
             lblInfoOdabir.Show();
             lblInfoOdabir.Text = "Skladište";
             //ovo je samo primjer
-            Form3 fm3 = new Form3(ulogaGlob);
-            fm3.Show();
+            frmSkladiste skladiste = new frmSkladiste(ulogaGlob);
+            skladiste.Show();
         }
 
         private void picBox_Proizvodi_MouseLeave(object sender, EventArgs e)
@@ -95,8 +95,8 @@ namespace Skladiste_HMR
             Sjena3.Show();
             lblInfoOdabir.Show();
             lblInfoOdabir.Text = "Proizvodi";
-            Form5 fm5 = new Form5(ulogaGlob);
-            fm5.Show();
+            frmProizvodi proizvodi = new frmProizvodi(ulogaGlob);
+            proizvodi.Show();
         }
 
         private void picBox_Korisnici_MouseHover(object sender, EventArgs e)
@@ -114,8 +114,8 @@ namespace Skladiste_HMR
         {
             Sjena2.Show();
             lblInfoKorR.Show();
-            Form6 fm6 = new Form6();
-            fm6.Show();
+            frmKorisnici korisnici = new frmKorisnici();
+            korisnici.Show();
         }
         
         private void btnOdjava_Click(object sender, EventArgs e)
@@ -123,8 +123,8 @@ namespace Skladiste_HMR
             this.Dispose();
             this.Hide();
             GC.Collect();
-            Form1 fm1 = new Form1();
-            fm1.Show();
+            frmPrijava prijava = new frmPrijava();
+            prijava.Show();
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)

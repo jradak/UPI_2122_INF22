@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Skladiste_HMR
 {
-    public partial class Form3 : Form
+    public partial class frmSkladiste : Form
     {
         string ulogaGlob = "";
-        public Form3(string uloga)
+        public frmSkladiste(string uloga)
         {
             ulogaGlob = uloga;
             InitializeComponent();

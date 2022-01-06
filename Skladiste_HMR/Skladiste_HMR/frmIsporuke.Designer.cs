@@ -1,7 +1,7 @@
 ﻿
 namespace Skladiste_HMR
 {
-    partial class Form7
+    partial class frmIsporuke
     {
         /// <summary>
         /// Required designer variable.
@@ -277,7 +277,7 @@ namespace Skladiste_HMR
             this.txtIdProizvod.Size = new System.Drawing.Size(0, 20);
             this.txtIdProizvod.TabIndex = 54;
             // 
-            // Form7
+            // frmIsporuke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -305,8 +305,8 @@ namespace Skladiste_HMR
             this.Controls.Add(this.btnBrisiIsp);
             this.Controls.Add(this.dataGridViewIsp);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form7";
-            this.Text = "Form7";
+            this.Name = "frmIsporuke";
+            this.Text = "Isporuke";
             this.Load += new System.EventHandler(this.Form7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIsp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPr)).EndInit();

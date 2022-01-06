@@ -1,6 +1,6 @@
 ﻿namespace Skladiste_HMR
 {
-    partial class Form3
+    partial class frmSkladiste
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSkladiste));
             this.btnGotoveIsporuke = new System.Windows.Forms.Button();
             this.btnUrediSkladiste = new System.Windows.Forms.Button();
             this.btnPrimjeni = new System.Windows.Forms.Button();
@@ -249,7 +249,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(1033, 310);
             this.dataGridView1.TabIndex = 34;
             // 
-            // Form3
+            // frmSkladiste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -272,9 +272,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
-            this.Name = "Form3";
+            this.Name = "frmSkladiste";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "Skladište";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericKolicina)).EndInit();
             this.panel1.ResumeLayout(false);

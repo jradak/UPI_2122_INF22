@@ -1,6 +1,6 @@
 ﻿namespace Skladiste_HMR
 {
-    partial class Form4
+    partial class frmPlaner
     {
         /// <summary>
         /// Required designer variable.
@@ -131,7 +131,7 @@
             this.dataGridViewIsp.Size = new System.Drawing.Size(768, 331);
             this.dataGridViewIsp.TabIndex = 35;
             // 
-            // Form4
+            // frmPlaner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,8 +145,8 @@
             this.Controls.Add(this.btnDodajNar);
             this.Controls.Add(this.btnBrisiNar);
             this.Controls.Add(this.dataGridViewNar);
-            this.Name = "Form4";
-            this.Text = "Form4";
+            this.Name = "frmPlaner";
+            this.Text = "Planer";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIsp)).EndInit();
