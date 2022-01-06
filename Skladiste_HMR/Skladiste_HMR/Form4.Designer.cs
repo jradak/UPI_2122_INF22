@@ -43,10 +43,9 @@
             // 
             this.lblDatum.AutoSize = true;
             this.lblDatum.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatum.Location = new System.Drawing.Point(48, 324);
-            this.lblDatum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDatum.Location = new System.Drawing.Point(86, 478);
             this.lblDatum.Name = "lblDatum";
-            this.lblDatum.Size = new System.Drawing.Size(58, 19);
+            this.lblDatum.Size = new System.Drawing.Size(88, 29);
             this.lblDatum.TabIndex = 31;
             this.lblDatum.Text = "Datum:";
             // 
@@ -54,10 +53,9 @@
             // 
             this.btnDodajNar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDodajNar.ForeColor = System.Drawing.Color.Salmon;
-            this.btnDodajNar.Location = new System.Drawing.Point(240, 249);
-            this.btnDodajNar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDodajNar.Location = new System.Drawing.Point(292, 383);
             this.btnDodajNar.Name = "btnDodajNar";
-            this.btnDodajNar.Size = new System.Drawing.Size(97, 38);
+            this.btnDodajNar.Size = new System.Drawing.Size(146, 58);
             this.btnDodajNar.TabIndex = 20;
             this.btnDodajNar.Text = "DODAJ";
             this.btnDodajNar.UseVisualStyleBackColor = true;
@@ -67,10 +65,9 @@
             // 
             this.btnBrisiNar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrisiNar.ForeColor = System.Drawing.Color.Salmon;
-            this.btnBrisiNar.Location = new System.Drawing.Point(37, 249);
-            this.btnBrisiNar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBrisiNar.Location = new System.Drawing.Point(29, 383);
             this.btnBrisiNar.Name = "btnBrisiNar";
-            this.btnBrisiNar.Size = new System.Drawing.Size(97, 38);
+            this.btnBrisiNar.Size = new System.Drawing.Size(146, 58);
             this.btnBrisiNar.TabIndex = 18;
             this.btnBrisiNar.Text = "BRIŠI";
             this.btnBrisiNar.UseVisualStyleBackColor = true;
@@ -82,15 +79,15 @@
             this.dataGridViewNar.AllowUserToDeleteRows = false;
             this.dataGridViewNar.AllowUserToResizeColumns = false;
             this.dataGridViewNar.AllowUserToResizeRows = false;
+            this.dataGridViewNar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewNar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNar.Location = new System.Drawing.Point(37, 16);
-            this.dataGridViewNar.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewNar.Location = new System.Drawing.Point(29, 25);
             this.dataGridViewNar.Name = "dataGridViewNar";
             this.dataGridViewNar.ReadOnly = true;
             this.dataGridViewNar.RowHeadersWidth = 62;
             this.dataGridViewNar.RowTemplate.Height = 28;
             this.dataGridViewNar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewNar.Size = new System.Drawing.Size(300, 215);
+            this.dataGridViewNar.Size = new System.Drawing.Size(409, 331);
             this.dataGridViewNar.TabIndex = 17;
             this.dataGridViewNar.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewNar_RowHeaderMouseClick);
             this.dataGridViewNar.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewNar_RowHeaderMouseDoubleClick);
@@ -99,20 +96,19 @@
             // 
             this.datumNar.CalendarFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datumNar.CalendarMonthBackground = System.Drawing.Color.White;
-            this.datumNar.Location = new System.Drawing.Point(121, 326);
-            this.datumNar.Margin = new System.Windows.Forms.Padding(2);
+            this.datumNar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datumNar.Location = new System.Drawing.Point(226, 472);
             this.datumNar.Name = "datumNar";
-            this.datumNar.Size = new System.Drawing.Size(141, 20);
+            this.datumNar.Size = new System.Drawing.Size(212, 37);
             this.datumNar.TabIndex = 33;
             // 
             // btnSpremiDodaj
             // 
             this.btnSpremiDodaj.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSpremiDodaj.ForeColor = System.Drawing.Color.Salmon;
-            this.btnSpremiDodaj.Location = new System.Drawing.Point(121, 370);
-            this.btnSpremiDodaj.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSpremiDodaj.Location = new System.Drawing.Point(226, 551);
             this.btnSpremiDodaj.Name = "btnSpremiDodaj";
-            this.btnSpremiDodaj.Size = new System.Drawing.Size(141, 46);
+            this.btnSpremiDodaj.Size = new System.Drawing.Size(212, 71);
             this.btnSpremiDodaj.TabIndex = 34;
             this.btnSpremiDodaj.Text = "SPREMI I DODAJ";
             this.btnSpremiDodaj.UseVisualStyleBackColor = true;
@@ -124,23 +120,24 @@
             this.dataGridViewIsp.AllowUserToDeleteRows = false;
             this.dataGridViewIsp.AllowUserToResizeColumns = false;
             this.dataGridViewIsp.AllowUserToResizeRows = false;
+            this.dataGridViewIsp.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewIsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewIsp.Location = new System.Drawing.Point(376, 16);
-            this.dataGridViewIsp.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewIsp.Location = new System.Drawing.Point(472, 25);
             this.dataGridViewIsp.Name = "dataGridViewIsp";
             this.dataGridViewIsp.ReadOnly = true;
             this.dataGridViewIsp.RowHeadersWidth = 62;
             this.dataGridViewIsp.RowTemplate.Height = 28;
             this.dataGridViewIsp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewIsp.Size = new System.Drawing.Size(512, 215);
+            this.dataGridViewIsp.Size = new System.Drawing.Size(768, 331);
             this.dataGridViewIsp.TabIndex = 35;
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(911, 442);
+            this.ClientSize = new System.Drawing.Size(1295, 655);
             this.Controls.Add(this.dataGridViewIsp);
             this.Controls.Add(this.btnSpremiDodaj);
             this.Controls.Add(this.datumNar);
@@ -148,7 +145,6 @@
             this.Controls.Add(this.btnDodajNar);
             this.Controls.Add(this.btnBrisiNar);
             this.Controls.Add(this.dataGridViewNar);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form4";
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
