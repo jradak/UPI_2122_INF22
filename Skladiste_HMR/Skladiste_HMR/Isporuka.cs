@@ -57,7 +57,9 @@ namespace Skladiste_HMR
             SqlDataAdapter adapt;
             SqlConnection con = new SqlConnection(Konstante.ConnectionString);
             SqlCommand cmd;
-            cmd = new SqlCommand("Select * from Isporuka where ID_Narudzba=@id ", con);
+            cmd = new SqlCommand("Select Isporuka.ID_Isporuka, Isporuka.Kolicina, Isporuka.Datum, " +
+            "Proizvod.Naziv, Proizvod.Cijena, Isporuka.ID_Narudzba from Isporuka inner join Proizvod " +
+            "on Isporuka.ID_Proizvod=Proizvod.ID_Proizvod where Isporuka.ID_Narudzba=@id ", con);
             cmd.Parameters.AddWithValue("@id", idNarudzba);
             con.Open();
             DataTable dt = new DataTable();
@@ -86,8 +88,8 @@ namespace Skladiste_HMR
         {
             SqlConnection con = new SqlConnection(Konstante.ConnectionString);
             SqlCommand cmd;
-            cmd = new SqlCommand("insert into Isporuka(Kolicina, Datum, ID_Porizvod, ID_Narudzba,ID_Sektor) " +
-                "values(@kolicina, @datum, @proizvod, @narudzba, @sektor", con);
+            cmd = new SqlCommand("insert into Isporuka(Kolicina, Datum, ID_Proizvod, ID_Narudzba,ID_Sektor) " +
+                "values(@kolicina, @datum, @proizvod, @narudzba, @sektor)", con);
             con.Open();
             cmd.Parameters.AddWithValue("@kolicina", kolicina);
             cmd.Parameters.AddWithValue("@datum", datum);

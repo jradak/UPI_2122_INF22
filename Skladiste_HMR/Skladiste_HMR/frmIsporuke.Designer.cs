@@ -42,15 +42,16 @@ namespace Skladiste_HMR
             this.lblProizvod = new System.Windows.Forms.Label();
             this.dataGridViewPr = new System.Windows.Forms.DataGridView();
             this.lblKolicinaPr = new System.Windows.Forms.Label();
-            this.txtKolicinaPr = new System.Windows.Forms.TextBox();
             this.btnZakljuciNar = new System.Windows.Forms.Button();
             this.btnSpremiIsp = new System.Windows.Forms.Button();
-            this.txtIdNarudzba = new System.Windows.Forms.Label();
-            this.txtSektor = new System.Windows.Forms.Label();
             this.lblIdProizvod = new System.Windows.Forms.Label();
-            this.txtIdProizvod = new System.Windows.Forms.Label();
+            this.numericKol = new System.Windows.Forms.NumericUpDown();
+            this.txtBoxSektor = new System.Windows.Forms.TextBox();
+            this.txtBoxProizvod = new System.Windows.Forms.TextBox();
+            this.txtBoxNarudzba = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericKol)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSektor
@@ -204,15 +205,6 @@ namespace Skladiste_HMR
             this.lblKolicinaPr.TabIndex = 47;
             this.lblKolicinaPr.Text = "Kolicina:";
             // 
-            // txtKolicinaPr
-            // 
-            this.txtKolicinaPr.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKolicinaPr.ForeColor = System.Drawing.Color.DimGray;
-            this.txtKolicinaPr.Location = new System.Drawing.Point(224, 654);
-            this.txtKolicinaPr.Name = "txtKolicinaPr";
-            this.txtKolicinaPr.Size = new System.Drawing.Size(211, 37);
-            this.txtKolicinaPr.TabIndex = 48;
-            // 
             // btnZakljuciNar
             // 
             this.btnZakljuciNar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,27 +229,6 @@ namespace Skladiste_HMR
             this.btnSpremiIsp.UseVisualStyleBackColor = true;
             this.btnSpremiIsp.Click += new System.EventHandler(this.btnSpremiIsp_Click);
             // 
-            // txtIdNarudzba
-            // 
-            this.txtIdNarudzba.AutoSize = true;
-            this.txtIdNarudzba.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdNarudzba.Location = new System.Drawing.Point(231, 485);
-            this.txtIdNarudzba.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtIdNarudzba.Name = "txtIdNarudzba";
-            this.txtIdNarudzba.Size = new System.Drawing.Size(0, 29);
-            this.txtIdNarudzba.TabIndex = 51;
-            // 
-            // txtSektor
-            // 
-            this.txtSektor.AutoSize = true;
-            this.txtSektor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSektor.Location = new System.Drawing.Point(225, 531);
-            this.txtSektor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtSektor.Name = "txtSektor";
-            this.txtSektor.Size = new System.Drawing.Size(114, 29);
-            this.txtSektor.TabIndex = 52;
-            this.txtSektor.Text = "nesvrstani";
-            // 
             // lblIdProizvod
             // 
             this.lblIdProizvod.AutoSize = true;
@@ -268,14 +239,41 @@ namespace Skladiste_HMR
             this.lblIdProizvod.TabIndex = 53;
             this.lblIdProizvod.Text = "ID_Proizvod:";
             // 
-            // txtIdProizvod
+            // numericKol
             // 
-            this.txtIdProizvod.AutoSize = true;
-            this.txtIdProizvod.Location = new System.Drawing.Point(231, 799);
-            this.txtIdProizvod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtIdProizvod.Name = "txtIdProizvod";
-            this.txtIdProizvod.Size = new System.Drawing.Size(0, 20);
-            this.txtIdProizvod.TabIndex = 54;
+            this.numericKol.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericKol.Location = new System.Drawing.Point(225, 660);
+            this.numericKol.Name = "numericKol";
+            this.numericKol.Size = new System.Drawing.Size(208, 37);
+            this.numericKol.TabIndex = 55;
+            // 
+            // txtBoxSektor
+            // 
+            this.txtBoxSektor.Enabled = false;
+            this.txtBoxSektor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSektor.Location = new System.Drawing.Point(225, 528);
+            this.txtBoxSektor.Name = "txtBoxSektor";
+            this.txtBoxSektor.Size = new System.Drawing.Size(210, 37);
+            this.txtBoxSektor.TabIndex = 56;
+            this.txtBoxSektor.Text = "nesvrstani";
+            // 
+            // txtBoxProizvod
+            // 
+            this.txtBoxProizvod.Enabled = false;
+            this.txtBoxProizvod.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxProizvod.Location = new System.Drawing.Point(225, 793);
+            this.txtBoxProizvod.Name = "txtBoxProizvod";
+            this.txtBoxProizvod.Size = new System.Drawing.Size(210, 37);
+            this.txtBoxProizvod.TabIndex = 57;
+            // 
+            // txtBoxNarudzba
+            // 
+            this.txtBoxNarudzba.Enabled = false;
+            this.txtBoxNarudzba.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxNarudzba.Location = new System.Drawing.Point(223, 482);
+            this.txtBoxNarudzba.Name = "txtBoxNarudzba";
+            this.txtBoxNarudzba.Size = new System.Drawing.Size(210, 37);
+            this.txtBoxNarudzba.TabIndex = 58;
             // 
             // frmIsporuke
             // 
@@ -284,13 +282,13 @@ namespace Skladiste_HMR
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1089, 961);
-            this.Controls.Add(this.txtIdProizvod);
+            this.Controls.Add(this.txtBoxNarudzba);
+            this.Controls.Add(this.txtBoxProizvod);
+            this.Controls.Add(this.txtBoxSektor);
+            this.Controls.Add(this.numericKol);
             this.Controls.Add(this.lblIdProizvod);
-            this.Controls.Add(this.txtSektor);
-            this.Controls.Add(this.txtIdNarudzba);
             this.Controls.Add(this.btnSpremiIsp);
             this.Controls.Add(this.btnZakljuciNar);
-            this.Controls.Add(this.txtKolicinaPr);
             this.Controls.Add(this.lblKolicinaPr);
             this.Controls.Add(this.dataGridViewPr);
             this.Controls.Add(this.lblProizvod);
@@ -310,6 +308,7 @@ namespace Skladiste_HMR
             this.Load += new System.EventHandler(this.Form7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIsp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericKol)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,12 +328,12 @@ namespace Skladiste_HMR
         private System.Windows.Forms.Label lblProizvod;
         private System.Windows.Forms.DataGridView dataGridViewPr;
         private System.Windows.Forms.Label lblKolicinaPr;
-        private System.Windows.Forms.TextBox txtKolicinaPr;
         private System.Windows.Forms.Button btnZakljuciNar;
         private System.Windows.Forms.Button btnSpremiIsp;
-        private System.Windows.Forms.Label txtIdNarudzba;
-        private System.Windows.Forms.Label txtSektor;
         private System.Windows.Forms.Label lblIdProizvod;
-        private System.Windows.Forms.Label txtIdProizvod;
+        private System.Windows.Forms.NumericUpDown numericKol;
+        private System.Windows.Forms.TextBox txtBoxSektor;
+        private System.Windows.Forms.TextBox txtBoxProizvod;
+        private System.Windows.Forms.TextBox txtBoxNarudzba;
     }
 }

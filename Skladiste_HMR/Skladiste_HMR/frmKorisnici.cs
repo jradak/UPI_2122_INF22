@@ -34,7 +34,7 @@ namespace Skladiste_HMR
             CiscenjeProzora();
             btnBrisiKor.Show();
             btnUrediKor.Show();
-            korisnik.Id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            korisnik.Id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             korisnik.Ime = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             korisnik.Prezime = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             korisnik.KorisnickoIme = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();

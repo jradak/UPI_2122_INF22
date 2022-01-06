@@ -9,18 +9,13 @@ namespace Skladiste_HMR
 {
     public partial class frmPlaner : Form
     {
-        string ulogaGlob = "";
-        SqlConnection con = new SqlConnection(Konstante.ConnectionString);
-        SqlCommand cmd;
-        SqlDataAdapter adapt;
-        int ID = -1;
-        string defDatum = "";
+        Korisnik korisnik;
+        Narudzba narudzba= new Narudzba(-1, DateTime.Today);
+        Isporuka isporuka = new Isporuka(-1, -1, DateTime.Today, -1, -1, -1);
 
-        string ID_Narudzba = "";
-
-        public frmPlaner(string uloga)
+        public frmPlaner(Korisnik k)
         {
-            ulogaGlob = uloga;
+            korisnik = k;
             InitializeComponent();
         }
 
@@ -29,13 +24,13 @@ namespace Skladiste_HMR
             CiscenjeProzora();
             btnBrisiNar.Hide();
 
-            if (ulogaGlob == "radnik")
+            if (korisnik.Uloga == "radnik")
             {
                 btnDodajNar.Hide();
             }
             try
             {
-                DisplayDataNarudzbe();
+                narudzba.PrikazNarudzbi(dataGridViewNar);
             }
             catch (Exception ex)
             {
@@ -49,9 +44,76 @@ namespace Skladiste_HMR
             IsprazniBox();
         }
 
+        private void btnSpremiDodaj_Click(object sender, EventArgs e)
+        {
+            DateTime datum = datumNar.Value;
+
+            if (datum != null)
+            {
+                narudzba.DodavanjeNarudzbi(datum);
+                MessageBox.Show("Uspješno ste unijeli novu narudžbu!");
+                narudzba.PrikazNarudzbi(dataGridViewNar);
+                CiscenjeProzora();
+
+                int zadnjiRed = dataGridViewNar.Rows.Count - 1;
+                narudzba.Id = int.Parse(dataGridViewNar.Rows[zadnjiRed].Cells[0].Value.ToString());
+                
+                frmIsporuke isporuke = new frmIsporuke(narudzba.Id);
+                isporuke.Show();
+            }
+
+        }
+
+        private void dataGridViewNar_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (korisnik.Uloga == "poslovoda")
+            {
+                btnBrisiNar.Show();
+                CiscenjeProzora();
+                IsprazniBox();
+
+                narudzba.Id= int.Parse(dataGridViewNar.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+            dataGridViewIsp.Show();
+
+            isporuka.PrikazIsporukaNarudzbe(narudzba.Id, dataGridViewIsp);
+        }
+       
+        private void btnBrisiNar_Click(object sender, EventArgs e)
+        {
+            if (narudzba.Id != -1)
+            {
+                DialogResult result = MessageBox.Show("Prilikom brisanja narudžbe, " +
+                    "izbrisat će se i pripadajuće isporuke! Jeste li sigurni da želite izbrisati narudžbu?",
+                    "Upozorenje", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    narudzba.BrisanjeNarudzbe(narudzba.Id);
+                    MessageBox.Show("Uspješno izbrisana narudžba!");
+                    narudzba.PrikazNarudzbi(dataGridViewNar);
+                    CiscenjeProzora();
+                    IsprazniBox();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Odaberite narudžbu za brisanje!");
+            }
+        }
+
+        private void dataGridViewNar_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            frmIsporuke isporuke = new frmIsporuke(narudzba.Id);
+            isporuke.Show();
+        }
+
         private void CiscenjeProzora()
         {
-            ID = -1;
+            narudzba.Id = -1;
             lblDatum.Hide();
             datumNar.Hide();
             btnSpremiDodaj.Hide();
@@ -67,129 +129,7 @@ namespace Skladiste_HMR
 
         private void IsprazniBox()
         {
-            datumNar.Value = DateTime.Now;
-        }
-        private void DisplayDataNarudzbe()
-        {
-            con.Open();
-            DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("Select * from Narudzba", con);
-            adapt.Fill(dt);
-            dataGridViewNar.DataSource = dt;
-            con.Close();
-
-            int zadnjiRed = dt.Rows.Count - 1;
-
-            ID_Narudzba = dt.Rows[zadnjiRed]["ID_Narudzba"].ToString();
-        }
-
-        private void DisplayData_Isporuke(string id_nar)
-        {
-            int narudzba = int.Parse(id_nar);
-            cmd = new SqlCommand("Select Isporuka.ID_Isporuka, Isporuka.Kolicina, Isporuka.Datum, " +
-            "Proizvod.Naziv, Proizvod.Cijena, Isporuka.ID_Narudzba from Isporuka inner join Proizvod " +
-            "on Isporuka.ID_Proizvod=Proizvod.ID_Proizvod where Isporuka.ID_Narudzba=@narudzba", con);
-            cmd.Parameters.AddWithValue("@narudzba", narudzba);
-            con.Open();
-            DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter(cmd);
-            adapt.Fill(dt);
-            dataGridViewIsp.DataSource = dt;
-            con.Close();
-        }
-
-        private void btnSpremiDodaj_Click(object sender, EventArgs e)
-        {
-            DateTime datum = datumNar.Value;
-
-            if (datum != null)
-            {
-                cmd = new SqlCommand("insert into Narudzba(Datum)" +
-                    " values(@datum)", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@datum", datum);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Uspješno ste unijeli novu narudžbu!");
-                DisplayDataNarudzbe();
-                CiscenjeProzora();
-              
-                frmIsporuke isporuke = new frmIsporuke(ID_Narudzba);
-                isporuke.Show();
-            }
-
-        }
-
-        private void dataGridViewNar_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (ulogaGlob == "poslovoda")
-            {
-                btnBrisiNar.Show();
-                CiscenjeProzora();
-                IsprazniBox();
-
-                ID = Convert.ToInt32(dataGridViewNar.Rows[e.RowIndex].Cells[0].Value.ToString());
-                defDatum = dataGridViewNar.Rows[e.RowIndex].Cells[1].Value.ToString();
-            }
-            dataGridViewIsp.Show();
-            DisplayData_Isporuke(ID.ToString());
-        }
-       
-        private void btnBrisiNar_Click(object sender, EventArgs e)
-        {
-            if (ID != -1)
-            {
-                BrisanjeNarudzbe(ID);
-                MessageBox.Show("Uspješno izbrisana narudžba!");
-                DisplayDataNarudzbe();
-                CiscenjeProzora();
-                IsprazniBox();
-            }
-            else
-            {
-                MessageBox.Show("Odaberite narudžbu za brisanje!");
-            }
-        }
-
-        private bool ProvjeraNarudzbe(int id)
-        {
-            cmd = new SqlCommand("Select * from Isporuka where ID_Narudzba=@id", con);
-            cmd.Parameters.AddWithValue("@id", id);
-            con.Open();
-            adapt = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            adapt.Fill(ds);
-            con.Close();
-            int count = ds.Tables[0].Rows.Count;
-            if (count > 0)
-            {
-                return false;
-            }
-            return true;
-        }
-
-        private void BrisanjeNarudzbe(int id)
-        {
-            if (!ProvjeraNarudzbe(id))
-            {
-                SqlCommand cmdPomocna = new SqlCommand("delete Isporuka where ID_Narudzba=@id", con);
-                con.Open();
-                cmdPomocna.Parameters.AddWithValue("@id", id);
-                cmdPomocna.ExecuteNonQuery();
-                con.Close();
-            }
-            cmd = new SqlCommand("delete Narudzba where ID_Narudzba=@id", con);
-            con.Open();
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.ExecuteNonQuery();
-            con.Close();
-        }
-
-        private void dataGridViewNar_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            frmIsporuke isporuke = new frmIsporuke(ID.ToString());
-            isporuke.Show();
+            datumNar.Value = DateTime.Today;
         }
     }
-    
 }

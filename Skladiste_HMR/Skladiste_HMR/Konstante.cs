@@ -77,5 +77,13 @@ namespace Skladiste_HMR
             }
             return true;
         }
+        public static bool ProvjeraKolicine(int kolicina)
+        {
+            if (kolicina <= 0)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

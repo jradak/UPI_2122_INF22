@@ -61,4 +61,26 @@ insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('M
 insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Ivo', 'Ivic', 'ivo123', '12345678', 'poslovoda');
 insert into dbo.Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga) values ('Mate', 'Matic', 'mmatic05', '12345678', 'radnik');
 
+USE Skladiste
 
+DBCC CHECKIDENT("dbo.SektorSkladista", reseed, 0)
+
+insert into dbo.SektorSkladista(OznakaSektora) values ('A');
+insert into dbo.SektorSkladista(OznakaSektora) values ('B');
+insert into dbo.SektorSkladista(OznakaSektora) values ('C');
+insert into dbo.SektorSkladista(OznakaSektora) values ('D');
+insert into dbo.SektorSkladista(OznakaSektora) values ('E');
+insert into dbo.SektorSkladista(OznakaSektora) values ('nesvrstani');
+
+USE Skladiste
+
+DBCC CHECKIDENT("dbo.Narudzba", reseed, 0)
+
+insert into dbo.Narudzba(Datum) values ('2021-10-20');
+insert into dbo.Narudzba(Datum) values ('2021-12-03');
+
+DBCC CHECKIDENT("dbo.Isporuka", reseed, 0)
+
+insert into dbo.Isporuka(Kolicina, Datum, ID_Proizvod, ID_Narudzba, ID_Sektor) values (15, '2021-11-05', 1, 1, 1);
+insert into dbo.Isporuka(Kolicina, Datum, ID_Proizvod, ID_Narudzba, ID_Sektor) values (7, '2021-11-07', 4, 1, 1);
+insert into dbo.Isporuka(Kolicina, Datum, ID_Proizvod, ID_Narudzba, ID_Sektor) values (3, '2021-12-09', 1, 2, 2);
