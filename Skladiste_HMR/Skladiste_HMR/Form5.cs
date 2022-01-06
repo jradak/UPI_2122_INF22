@@ -60,11 +60,7 @@ namespace Skladiste_HMR
         {
             if (ID != -1)
             {
-                cmd = new SqlCommand("delete Proizvod where ID_Proizvod=@id", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@id", ID);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                BrisanjeProizvoda(ID);
                 MessageBox.Show("Uspješno izbrisan proizvod!");
                 DisplayData();
                 CiscenjeProzora();
@@ -99,15 +95,10 @@ namespace Skladiste_HMR
         {
             string proizvod = txtNazivPr.Text;
             string cijena = txtCijenaPr.Text;
-            string valuta = cmbBoxValuta.SelectedItem.ToString();
-
-            if (valuta.Length > 0 && ProvjeraUnosa(proizvod) && ProvjeraCijene(cijena))
+            
+            if (cmbBoxValuta.SelectedIndex > -1 && ProvjeraUnosa(proizvod) && ProvjeraCijene(cijena))
             {
-                if (cijena.IndexOf('.') != -3 || cijena.IndexOf(',') != -3)
-                {
-                    cijena += '0';
-                }
-
+                string valuta = cmbBoxValuta.SelectedItem.ToString();
                 cmd = new SqlCommand("update Proizvod set Naziv=@naziv, Cijena=@cijena" +
                     " where ID_Proizvod=@id", con);
                 con.Open();
@@ -131,14 +122,11 @@ namespace Skladiste_HMR
         {
             string proizvod = txtNazivPr.Text;
             string cijena = txtCijenaPr.Text;
-            string valuta = cmbBoxValuta.SelectedItem.ToString();
-
-            if (valuta.Length > 0 && ProvjeraUnosa(proizvod) && ProvjeraCijene(cijena))
+            
+            if (cmbBoxValuta.SelectedIndex > -1 && ProvjeraUnosa(proizvod) && ProvjeraCijene(cijena))
             {
-                if (cijena.IndexOf('.') != -3 || cijena.IndexOf(',') != -3)
-                {
-                    cijena += '0';
-                }
+                string valuta = cmbBoxValuta.SelectedItem.ToString();
+               
                 cmd = new SqlCommand("insert into Proizvod(Naziv, Cijena)" +
                     " values(@naziv, @cijena)", con);
                 con.Open();
@@ -156,6 +144,41 @@ namespace Skladiste_HMR
                 MessageBox.Show("Niste popunili ispravno sva polja. Pokušajte ponovno!");
             }
         }
+
+        private bool ProvjeraProizvoda(int id)
+        {
+            cmd = new SqlCommand("Select * from Isporuka where ID_Proizvod=@id", con);
+            cmd.Parameters.AddWithValue("@id", id);
+            con.Open();
+            adapt = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            adapt.Fill(ds);
+            con.Close();
+            int count = ds.Tables[0].Rows.Count;
+            if (count > 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private void BrisanjeProizvoda(int id)
+        {
+            if (!ProvjeraProizvoda(id))
+            {
+                SqlCommand cmdPomocna = new SqlCommand("delete Isporuka where ID_Proizvod=@id", con);
+                con.Open();
+                cmdPomocna.Parameters.AddWithValue("@id", id);
+                cmdPomocna.ExecuteNonQuery();
+                con.Close();
+            }
+            cmd = new SqlCommand("delete Proizvod where ID_Proizvod=@id", con);
+            con.Open();
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
         private void DisplayData()
         {
             con.Open();

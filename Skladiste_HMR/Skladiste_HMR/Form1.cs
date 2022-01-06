@@ -18,10 +18,6 @@ namespace Skladiste_HMR
         {
             InitializeComponent();
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnPrijava_Click(object sender, EventArgs e)
         {
@@ -80,6 +76,11 @@ namespace Skladiste_HMR
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

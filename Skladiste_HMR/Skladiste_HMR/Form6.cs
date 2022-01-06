@@ -72,11 +72,12 @@ namespace Skladiste_HMR
             string prezime = txtPrezime.Text;
             string korisnickoIme = txtKorIme.Text;
             string lozinka = txtLozinka.Text;
-            string uloga = cmbBoxUloga.SelectedItem.ToString();
+            
 
-            if (uloga.Length > 0 && provjeraUnosa(ime) && provjeraUnosa(prezime)
+            if (cmbBoxUloga.SelectedIndex > -1 && provjeraUnosa(ime) && provjeraUnosa(prezime)
                 && provjeraKorImena(korisnickoIme) && provjeraLozinke(lozinka))
             {
+                string uloga = cmbBoxUloga.SelectedItem.ToString();
                 cmd = new SqlCommand("insert into Korisnik(Ime, Prezime, KorisnickoIme, Lozinka, Uloga)" +
                     " values(@ime, @prezime, @kIme, @lozinka, @uloga)", con);
                 con.Open();
