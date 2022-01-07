@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 
 namespace Skladiste_HMR

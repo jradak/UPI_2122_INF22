@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Skladiste_HMR
@@ -66,10 +60,9 @@ namespace Skladiste_HMR
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
             btnBrisi.Show();
             btnUredi.Show();
-            isporuka.Id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            isporuka.Id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             isporuka.Kolicina = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
             def_sektor = sektor.DohvatiNazivSektora(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
             isporuka.IdSektor = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
@@ -133,12 +126,19 @@ namespace Skladiste_HMR
                 MessageBox.Show("Odaberite proizvod za brisanje!");
             }
         }
+
         private void btnGotoveIsporuke_Click(object sender, EventArgs e)
         {
             CiscenjeProzora();
             isporuka.PrikazPraznihIsporuka(dataGridView1);
         }
-
+        
+        private void btnUrediSkladiste_Click(object sender, EventArgs e)
+        {
+            //nefunkcionalno
+            //uredivanje izgleda skladista
+        }
+        
         private void PopunjavanjeProzora()
         {
             btnPrimjeni.Show();

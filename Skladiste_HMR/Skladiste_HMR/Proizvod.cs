@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -27,6 +22,7 @@ namespace Skladiste_HMR
             this.Naziv = naziv;
             this.Cijena = cijena;
         }
+
         public void PrikazProizvoda(DataGridView grid)
         {
             SqlConnection con = new SqlConnection(Konstante.ConnectionString);
@@ -38,6 +34,7 @@ namespace Skladiste_HMR
             grid.DataSource = dt;
             con.Close();
         }
+
         public void DodavanjeProizvoda(string naziv, string cijena)
         {
             SqlConnection con = new SqlConnection(Konstante.ConnectionString);
@@ -50,6 +47,7 @@ namespace Skladiste_HMR
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
         public void UredivanjeProizvoda(int id, string naziv, string cijena)
         {
             SqlConnection con = new SqlConnection(Konstante.ConnectionString);
@@ -63,7 +61,8 @@ namespace Skladiste_HMR
             cmd.ExecuteNonQuery();
             con.Close();
         }
-        public void brisanjeProizvoda(int id)
+
+        public void BrisanjeProizvoda(int id)
         {
             SqlConnection con = new SqlConnection(Konstante.ConnectionString);
             SqlCommand cmd;
@@ -82,6 +81,7 @@ namespace Skladiste_HMR
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
         private bool ProvjeraProizvoda(int id)
         {
             SqlConnection con = new SqlConnection(Konstante.ConnectionString);
@@ -95,6 +95,7 @@ namespace Skladiste_HMR
             adapt.Fill(ds);
             con.Close();
             int count = ds.Tables[0].Rows.Count;
+            //ako ima isporuka koje sadrzavaju id proizvoda
             if (count > 0)
             {
                 return false;

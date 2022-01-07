@@ -73,6 +73,7 @@
             this.btnUrediSkladiste.Size = new System.Drawing.Size(32, 31);
             this.btnUrediSkladiste.TabIndex = 46;
             this.btnUrediSkladiste.UseVisualStyleBackColor = false;
+            this.btnUrediSkladiste.Click += new System.EventHandler(this.btnUrediSkladiste_Click);
             // 
             // btnPrimjeni
             // 

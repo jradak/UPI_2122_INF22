@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -90,6 +86,7 @@ namespace Skladiste_HMR
             adapt.Fill(ds);
             con.Close();
             int count = ds.Tables[0].Rows.Count;
+            // ako postoji isporuka koja ovisi o id neke narudzbe
             if (count > 0)
             {
                 return false;

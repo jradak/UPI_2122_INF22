@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Skladiste_HMR
 {
@@ -62,7 +60,8 @@ namespace Skladiste_HMR
                     "Upozorenje", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    def_proizvod.brisanjeProizvoda(def_proizvod.Id);
+                    def_proizvod.BrisanjeProizvoda(def_proizvod.Id);
+                    def_proizvod.BrisanjeProizvoda(def_proizvod.Id);
 
                     MessageBox.Show("Uspješno izbrisan proizvod!");
                     def_proizvod.PrikazProizvoda(dataGridView1);

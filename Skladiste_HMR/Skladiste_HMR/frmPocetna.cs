@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Skladiste_HMR
@@ -71,7 +64,6 @@ namespace Skladiste_HMR
             Sjena2.Show();
             lblInfoOdabir.Show();
             lblInfoOdabir.Text = "Skladište";
-            //ovo je samo primjer
             frmSkladiste skladiste = new frmSkladiste(korisnik);
             skladiste.Show();
         }
@@ -121,6 +113,7 @@ namespace Skladiste_HMR
         {
             this.Dispose();
             this.Hide();
+            //prisilni garbage collecition 
             GC.Collect();
             frmPrijava prijava = new frmPrijava();
             prijava.Show();
