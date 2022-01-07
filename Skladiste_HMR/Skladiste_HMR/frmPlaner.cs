@@ -55,7 +55,7 @@ namespace Skladiste_HMR
                 narudzba.Id = int.Parse(dataGridViewNar.Rows[zadnjiRed].Cells[0].Value.ToString());
                 
                 frmIsporuke isporuke = new frmIsporuke(narudzba.Id);
-                isporuke.Show();
+                isporuke.ShowDialog();
             }
 
         }
@@ -104,7 +104,7 @@ namespace Skladiste_HMR
         private void dataGridViewNar_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             frmIsporuke isporuke = new frmIsporuke(narudzba.Id);
-            isporuke.Show();
+            isporuke.ShowDialog();
         }
 
         private void CiscenjeProzora()

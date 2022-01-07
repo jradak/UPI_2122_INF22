@@ -31,7 +31,7 @@ namespace Skladiste_HMR
         private void picBox_Planer_Click(object sender, EventArgs e)
         {
             frmPlaner planer = new frmPlaner(korisnik);
-            planer.Show();
+            planer.ShowDialog();
         }
 
         private void picBox_Planer_MouseHover(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace Skladiste_HMR
             lblInfoOdabir.Show();
             lblInfoOdabir.Text = "Skladište";
             frmSkladiste skladiste = new frmSkladiste(korisnik);
-            skladiste.Show();
+            skladiste.ShowDialog();
         }
 
         private void picBox_Proizvodi_MouseLeave(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace Skladiste_HMR
             lblInfoOdabir.Show();
             lblInfoOdabir.Text = "Proizvodi";
             frmProizvodi proizvodi = new frmProizvodi(korisnik);
-            proizvodi.Show();
+            proizvodi.ShowDialog();
         }
 
         private void picBox_Korisnici_MouseHover(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace Skladiste_HMR
             Sjena2.Show();
             lblInfoKorR.Show();
             frmKorisnici korisnici = new frmKorisnici();
-            korisnici.Show();
+            korisnici.ShowDialog();
         }
         
         private void btnOdjava_Click(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace Skladiste_HMR
             //prisilni garbage collecition 
             GC.Collect();
             frmPrijava prijava = new frmPrijava();
-            prijava.Show();
+            prijava.ShowDialog();
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
