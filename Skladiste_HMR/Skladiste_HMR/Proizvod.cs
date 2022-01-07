@@ -102,5 +102,32 @@ namespace Skladiste_HMR
             }
             return true;
         }
+
+        public int DohvatiIdProizvoda(string naziv)
+        {
+            SqlConnection con = new SqlConnection(Konstante.ConnectionString);
+            SqlCommand cmd;
+            SqlDataAdapter adapt;
+            string id = "";
+            cmd = new SqlCommand("Select * from Proizvod where Naziv=@naziv", con);
+            cmd.Parameters.AddWithValue("@naziv", naziv);
+            con.Open();
+            adapt = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            DataSet ds = new DataSet();
+            adapt.Fill(dt);
+            adapt.Fill(ds);
+            con.Close();
+            int count = ds.Tables[0].Rows.Count;
+            //ako postoji jedinstveni
+            if (count == 1)
+            {
+                id = dt.Rows[0]["ID_Proizvod"].ToString();
+            }
+
+            int id_ = int.Parse(id);
+
+            return id_;
+        }
     }
 }

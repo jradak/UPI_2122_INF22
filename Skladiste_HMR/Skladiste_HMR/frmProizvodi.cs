@@ -61,11 +61,13 @@ namespace Skladiste_HMR
                 if (result == DialogResult.Yes)
                 {
                     def_proizvod.BrisanjeProizvoda(def_proizvod.Id);
-                    def_proizvod.BrisanjeProizvoda(def_proizvod.Id);
-
+                
                     MessageBox.Show("Uspješno izbrisan proizvod!");
                     def_proizvod.PrikazProizvoda(dataGridView1);
                     CiscenjeProzora();
+                    dataGridView1.ClearSelection();
+                    btnBrisiPr.Hide();
+                    btnUrediPr.Hide();
                 }
                 else
                 {
@@ -112,6 +114,9 @@ namespace Skladiste_HMR
                 def_proizvod.PrikazProizvoda(dataGridView1);
                 CiscenjeProzora();
                 IsprazniBox();
+                dataGridView1.ClearSelection();
+                btnBrisiPr.Hide();
+                btnUrediPr.Hide();
             }
             else
             {
@@ -171,6 +176,7 @@ namespace Skladiste_HMR
         private void PodjelaCijene()
         {
             string pomocna = "";
+            valuta_def = "";
             foreach (char znak in def_proizvod.Cijena)
             {
                 if (Char.IsDigit(znak) || znak == '.' || znak == ',')

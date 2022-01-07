@@ -95,7 +95,22 @@ namespace Skladiste_HMR
             cmd.ExecuteNonQuery();
             con.Close();
         }
-        public void UredivanjeIsporuke(int id, DateTime datum, int kolicina, int _idSektor)
+        public void UredivanjeIsporukeNarudzbe(int id, DateTime datum, int kolicina,int _idProizvod)
+        {
+            SqlConnection con = new SqlConnection(Konstante.ConnectionString);
+            SqlCommand cmd;
+            cmd = new SqlCommand("update Isporuka set Kolicina=@kolicina, Datum=@datum, ID_Proizvod=@proizvod" +
+                    " where ID_Isporuka=@id", con);
+            con.Open();
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@datum", datum);
+            cmd.Parameters.AddWithValue("@kolicina", kolicina);
+            cmd.Parameters.AddWithValue("@proizvod", _idProizvod);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void UredivanjeIsporukeSektora(int id, DateTime datum, int kolicina, int _idSektor)
         {
             SqlConnection con = new SqlConnection(Konstante.ConnectionString);
             SqlCommand cmd;

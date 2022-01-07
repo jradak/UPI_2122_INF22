@@ -54,13 +54,12 @@ namespace Skladiste_HMR
 
         private void btnNedefinirani_Click(object sender, EventArgs e)
         {
-            sektor.OznakaSektora = sektor.DohvatiIdSektora(btnSektorE.Text);
-            isporuka.PrikazIsporukaSektora(sektor.OznakaSektora, dataGridView1);
+            sektor.Id = int.Parse(sektor.DohvatiIdSektora(btnNedefinirani.Text));
+            isporuka.PrikazIsporukaSektora(sektor.Id.ToString(), dataGridView1);
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            btnBrisi.Show();
             btnUredi.Show();
             isporuka.Id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             isporuka.Kolicina = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
@@ -100,7 +99,7 @@ namespace Skladiste_HMR
 
             if (kolicina > -1 && id_sektor > -1)
             {
-                isporuka.UredivanjeIsporuke(isporuka.Id, datum, kolicina, id_sektor);
+                isporuka.UredivanjeIsporukeSektora(isporuka.Id, datum, kolicina, id_sektor);
                 MessageBox.Show("Uspješno ste promijenili podatke o proizvodu!");
                 isporuka.PrikazIsporukaSektora(sektor.DohvatiIdSektora(cmbBoxSektor.Text), dataGridView1);
                 CiscenjeProzora();
@@ -111,20 +110,6 @@ namespace Skladiste_HMR
                 MessageBox.Show("Niste popunili ispravno sva polja. Pokušajte ponovno!");
             }
 
-        }
-        private void btnBrisi_Click(object sender, EventArgs e)
-        {
-            if (isporuka.Id > -1)
-            {
-                isporuka.BrisanjeIsporuke(isporuka.Id);
-                MessageBox.Show("Uspješno izbrisan proizvod!");
-                isporuka.PrikazIsporukaSektora(sektor.OznakaSektora, dataGridView1);
-                CiscenjeProzora();
-            }
-            else
-            {
-                MessageBox.Show("Odaberite proizvod za brisanje!");
-            }
         }
 
         private void btnGotoveIsporuke_Click(object sender, EventArgs e)
@@ -151,7 +136,6 @@ namespace Skladiste_HMR
         }
         private void CiscenjeProzora()
         {
-            btnBrisi.Hide();
             btnUredi.Hide();
             btnPrimjeni.Hide();
             lblSektor.Hide();

@@ -50,17 +50,17 @@ namespace Skladiste_HMR
 
         private void btnSpremiIsp_Click(object sender, EventArgs e)
         {
-            isporuka.Kolicina = int.Parse(numericKol.Value.ToString());
-            isporuka.Datum = dateTimePicker1.Value;
+            int kolicina = int.Parse(numericKol.Value.ToString());
+            DateTime datum = dateTimePicker1.Value;
             string proizvod = txtBoxProizvod.Text;
             isporuka.IdNarudzba = int.Parse(txtBoxNarudzba.Text);
             sektor.OznakaSektora = txtBoxSektor.Text;
             isporuka.IdSektor = int.Parse(sektor.DohvatiIdSektora(sektor.OznakaSektora));
             
-            if (isporuka.Kolicina > 0 && proizvod!="")
+            if (kolicina > 0 && proizvod!="")
             {
                 isporuka.IdProizvod = int.Parse(proizvod);
-                isporuka.DodavanjeIsporuke(isporuka.Datum, isporuka.Kolicina, 
+                isporuka.DodavanjeIsporuke(datum, kolicina, 
                     isporuka.IdProizvod, isporuka.IdNarudzba, isporuka.IdSektor);
                 MessageBox.Show("Uspješno ste unijeli novu isporuku!");
                 isporuka.PrikazIsporukaNarudzbe(narudzba, dataGridViewIsp);
@@ -86,6 +86,7 @@ namespace Skladiste_HMR
 
         private void CiscenjeProzora()
         {
+            isporuka.Id = -1;
             btnSpremiIsp.Hide();
             btnPromijeniIsp.Hide();
             btnOdaberiPr.Hide();
@@ -101,7 +102,7 @@ namespace Skladiste_HMR
             dateTimePicker1.Hide();
             numericKol.Hide();
             dataGridViewPr.Hide();
-            btnZakljuciNar.Hide();
+            btnZakljuciNar.Show();
         }
         private void PopunjavanjeProzora()
         {
@@ -117,14 +118,82 @@ namespace Skladiste_HMR
             txtBoxProizvod.Show();
             dateTimePicker1.Show();
             numericKol.Show();
-            btnZakljuciNar.Show();
         }
 
         private void IsprazniBox()
         {
             dateTimePicker1.Value = DateTime.Today;
-            numericKol.Text = "";
+            numericKol.Value = 0;
             txtBoxProizvod.Text = "";
+        }
+
+        private void btnBrisiIsp_Click(object sender, EventArgs e)
+        {
+            if (isporuka.Id != -1)
+            {
+                isporuka.BrisanjeIsporuke(isporuka.Id);
+                MessageBox.Show("Uspješno izbrisana isporuka!");
+                isporuka.PrikazIsporukaNarudzbe(narudzba, dataGridViewIsp);
+                CiscenjeProzora();
+                dataGridViewIsp.ClearSelection();
+                btnBrisiIsp.Hide();
+                btnUrediIsp.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Odaberite isporuku za brisanje!");
+            }
+        }
+
+        private void btnUrediIsp_Click(object sender, EventArgs e)
+        {
+            PopunjavanjeProzora();
+            btnPromijeniIsp.Show();
+            btnSpremiIsp.Hide();
+
+            numericKol.Value = isporuka.Kolicina;
+            dateTimePicker1.Value = isporuka.Datum;
+            txtBoxProizvod.Text = isporuka.IdProizvod.ToString();
+                  
+        }
+
+        private void dataGridViewIsp_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            btnBrisiIsp.Show();
+            btnUrediIsp.Show();
+            CiscenjeProzora();
+            IsprazniBox();
+            isporuka.Id = Convert.ToInt32(dataGridViewIsp.Rows[e.RowIndex].Cells[0].Value.ToString());
+            isporuka.Kolicina = int.Parse(dataGridViewIsp.Rows[e.RowIndex].Cells[1].Value.ToString());
+            isporuka.Datum = DateTime.Parse(dataGridViewIsp.Rows[e.RowIndex].Cells[2].Value.ToString());
+            isporuka.IdProizvod = proizvod.DohvatiIdProizvoda(dataGridViewIsp.Rows[e.RowIndex].Cells[3].Value.ToString());
+
+        }
+
+        private void btnPromijeniIsp_Click(object sender, EventArgs e)
+        {
+            int kolicina = int.Parse(numericKol.Value.ToString());
+            DateTime datum = dateTimePicker1.Value;
+            string proizvod = txtBoxProizvod.Text;
+  
+            if (kolicina > 0 && proizvod != "")
+            {
+                isporuka.IdProizvod = int.Parse(proizvod);
+                isporuka.UredivanjeIsporukeNarudzbe(isporuka.Id, datum, kolicina,
+                    isporuka.IdProizvod);
+                MessageBox.Show("Uspješno ste promijenili podatke o isporuci!");
+                isporuka.PrikazIsporukaNarudzbe(narudzba, dataGridViewIsp);
+                CiscenjeProzora();
+                IsprazniBox();
+                dataGridViewIsp.ClearSelection();
+                btnBrisiIsp.Hide();
+                btnUrediIsp.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Niste popunili ispravno sva polja. Pokušajte ponovno!");
+            }
         }
     }
 }
