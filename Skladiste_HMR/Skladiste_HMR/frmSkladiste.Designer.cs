@@ -54,10 +54,9 @@
             // 
             // btnGotoveIsporuke
             // 
-            this.btnGotoveIsporuke.Location = new System.Drawing.Point(33, 486);
-            this.btnGotoveIsporuke.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGotoveIsporuke.Location = new System.Drawing.Point(50, 748);
             this.btnGotoveIsporuke.Name = "btnGotoveIsporuke";
-            this.btnGotoveIsporuke.Size = new System.Drawing.Size(266, 47);
+            this.btnGotoveIsporuke.Size = new System.Drawing.Size(399, 72);
             this.btnGotoveIsporuke.TabIndex = 47;
             this.btnGotoveIsporuke.Text = "gotove isporuke";
             this.btnGotoveIsporuke.UseVisualStyleBackColor = true;
@@ -68,10 +67,9 @@
             this.btnUrediSkladiste.BackColor = System.Drawing.Color.Transparent;
             this.btnUrediSkladiste.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUrediSkladiste.BackgroundImage")));
             this.btnUrediSkladiste.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUrediSkladiste.Location = new System.Drawing.Point(305, 213);
-            this.btnUrediSkladiste.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUrediSkladiste.Location = new System.Drawing.Point(458, 328);
             this.btnUrediSkladiste.Name = "btnUrediSkladiste";
-            this.btnUrediSkladiste.Size = new System.Drawing.Size(21, 20);
+            this.btnUrediSkladiste.Size = new System.Drawing.Size(32, 31);
             this.btnUrediSkladiste.TabIndex = 46;
             this.btnUrediSkladiste.UseVisualStyleBackColor = false;
             this.btnUrediSkladiste.Click += new System.EventHandler(this.btnUrediSkladiste_Click);
@@ -80,10 +78,9 @@
             // 
             this.btnPrimjeni.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrimjeni.ForeColor = System.Drawing.Color.Salmon;
-            this.btnPrimjeni.Location = new System.Drawing.Point(564, 439);
-            this.btnPrimjeni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrimjeni.Location = new System.Drawing.Point(846, 675);
             this.btnPrimjeni.Name = "btnPrimjeni";
-            this.btnPrimjeni.Size = new System.Drawing.Size(87, 38);
+            this.btnPrimjeni.Size = new System.Drawing.Size(130, 58);
             this.btnPrimjeni.TabIndex = 45;
             this.btnPrimjeni.Text = "PRIMJENI";
             this.btnPrimjeni.UseVisualStyleBackColor = true;
@@ -100,20 +97,18 @@
             "D",
             "E",
             "nesvrstani"});
-            this.cmbBoxSektor.Location = new System.Drawing.Point(486, 389);
-            this.cmbBoxSektor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBoxSektor.Location = new System.Drawing.Point(729, 598);
             this.cmbBoxSektor.Name = "cmbBoxSektor";
-            this.cmbBoxSektor.Size = new System.Drawing.Size(167, 27);
+            this.cmbBoxSektor.Size = new System.Drawing.Size(248, 37);
             this.cmbBoxSektor.TabIndex = 44;
             // 
             // lblSektor
             // 
             this.lblSektor.AutoSize = true;
             this.lblSektor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSektor.Location = new System.Drawing.Point(414, 391);
-            this.lblSektor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSektor.Location = new System.Drawing.Point(621, 602);
             this.lblSektor.Name = "lblSektor";
-            this.lblSektor.Size = new System.Drawing.Size(58, 19);
+            this.lblSektor.Size = new System.Drawing.Size(85, 29);
             this.lblSektor.TabIndex = 43;
             this.lblSektor.Text = "Sektor:";
             // 
@@ -121,20 +116,18 @@
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(486, 343);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(729, 528);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(167, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(248, 37);
             this.dateTimePicker1.TabIndex = 42;
             // 
             // lblDatum
             // 
             this.lblDatum.AutoSize = true;
             this.lblDatum.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatum.Location = new System.Drawing.Point(414, 347);
-            this.lblDatum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDatum.Location = new System.Drawing.Point(621, 534);
             this.lblDatum.Name = "lblDatum";
-            this.lblDatum.Size = new System.Drawing.Size(59, 19);
+            this.lblDatum.Size = new System.Drawing.Size(88, 29);
             this.lblDatum.TabIndex = 41;
             this.lblDatum.Text = "Datum:";
             // 
@@ -142,30 +135,27 @@
             // 
             this.lblKolicina.AutoSize = true;
             this.lblKolicina.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKolicina.Location = new System.Drawing.Point(407, 306);
-            this.lblKolicina.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKolicina.Location = new System.Drawing.Point(610, 471);
             this.lblKolicina.Name = "lblKolicina";
-            this.lblKolicina.Size = new System.Drawing.Size(67, 19);
+            this.lblKolicina.Size = new System.Drawing.Size(99, 29);
             this.lblKolicina.TabIndex = 40;
             this.lblKolicina.Text = "Količina:";
             // 
             // numericKolicina
             // 
             this.numericKolicina.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericKolicina.Location = new System.Drawing.Point(486, 305);
-            this.numericKolicina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericKolicina.Location = new System.Drawing.Point(729, 469);
             this.numericKolicina.Name = "numericKolicina";
-            this.numericKolicina.Size = new System.Drawing.Size(165, 27);
+            this.numericKolicina.Size = new System.Drawing.Size(248, 37);
             this.numericKolicina.TabIndex = 39;
             // 
             // btnUredi
             // 
             this.btnUredi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUredi.ForeColor = System.Drawing.Color.Salmon;
-            this.btnUredi.Location = new System.Drawing.Point(564, 224);
-            this.btnUredi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUredi.Location = new System.Drawing.Point(846, 345);
             this.btnUredi.Name = "btnUredi";
-            this.btnUredi.Size = new System.Drawing.Size(87, 38);
+            this.btnUredi.Size = new System.Drawing.Size(130, 58);
             this.btnUredi.TabIndex = 37;
             this.btnUredi.Text = "UREDI";
             this.btnUredi.UseVisualStyleBackColor = true;
@@ -173,10 +163,9 @@
             // 
             // btnNedefinirani
             // 
-            this.btnNedefinirani.Location = new System.Drawing.Point(33, 430);
-            this.btnNedefinirani.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNedefinirani.Location = new System.Drawing.Point(50, 662);
             this.btnNedefinirani.Name = "btnNedefinirani";
-            this.btnNedefinirani.Size = new System.Drawing.Size(266, 47);
+            this.btnNedefinirani.Size = new System.Drawing.Size(399, 72);
             this.btnNedefinirani.TabIndex = 36;
             this.btnNedefinirani.Text = "nesvrstani";
             this.btnNedefinirani.UseVisualStyleBackColor = true;
@@ -189,18 +178,16 @@
             this.panel1.Controls.Add(this.btnSektorC);
             this.panel1.Controls.Add(this.btnSektorB);
             this.panel1.Controls.Add(this.btnSektorA);
-            this.panel1.Location = new System.Drawing.Point(31, 213);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(46, 328);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(270, 213);
+            this.panel1.Size = new System.Drawing.Size(405, 328);
             this.panel1.TabIndex = 35;
             // 
             // btnSektorE
             // 
-            this.btnSektorE.Location = new System.Drawing.Point(180, 153);
-            this.btnSektorE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSektorE.Location = new System.Drawing.Point(270, 235);
             this.btnSektorE.Name = "btnSektorE";
-            this.btnSektorE.Size = new System.Drawing.Size(88, 58);
+            this.btnSektorE.Size = new System.Drawing.Size(132, 89);
             this.btnSektorE.TabIndex = 4;
             this.btnSektorE.Text = "E";
             this.btnSektorE.UseVisualStyleBackColor = true;
@@ -208,10 +195,9 @@
             // 
             // btnSektorD
             // 
-            this.btnSektorD.Location = new System.Drawing.Point(92, 153);
-            this.btnSektorD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSektorD.Location = new System.Drawing.Point(138, 235);
             this.btnSektorD.Name = "btnSektorD";
-            this.btnSektorD.Size = new System.Drawing.Size(84, 58);
+            this.btnSektorD.Size = new System.Drawing.Size(126, 89);
             this.btnSektorD.TabIndex = 3;
             this.btnSektorD.Text = "D";
             this.btnSektorD.UseVisualStyleBackColor = true;
@@ -219,10 +205,9 @@
             // 
             // btnSektorC
             // 
-            this.btnSektorC.Location = new System.Drawing.Point(2, 153);
-            this.btnSektorC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSektorC.Location = new System.Drawing.Point(3, 235);
             this.btnSektorC.Name = "btnSektorC";
-            this.btnSektorC.Size = new System.Drawing.Size(86, 58);
+            this.btnSektorC.Size = new System.Drawing.Size(129, 89);
             this.btnSektorC.TabIndex = 2;
             this.btnSektorC.Text = "C";
             this.btnSektorC.UseVisualStyleBackColor = true;
@@ -230,10 +215,9 @@
             // 
             // btnSektorB
             // 
-            this.btnSektorB.Location = new System.Drawing.Point(107, 2);
-            this.btnSektorB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSektorB.Location = new System.Drawing.Point(160, 3);
             this.btnSektorB.Name = "btnSektorB";
-            this.btnSektorB.Size = new System.Drawing.Size(161, 58);
+            this.btnSektorB.Size = new System.Drawing.Size(242, 89);
             this.btnSektorB.TabIndex = 1;
             this.btnSektorB.Text = "B";
             this.btnSektorB.UseVisualStyleBackColor = true;
@@ -241,10 +225,9 @@
             // 
             // btnSektorA
             // 
-            this.btnSektorA.Location = new System.Drawing.Point(2, 2);
-            this.btnSektorA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSektorA.Location = new System.Drawing.Point(3, 3);
             this.btnSektorA.Name = "btnSektorA";
-            this.btnSektorA.Size = new System.Drawing.Size(101, 58);
+            this.btnSektorA.Size = new System.Drawing.Size(152, 89);
             this.btnSektorA.TabIndex = 0;
             this.btnSektorA.Text = "A";
             this.btnSektorA.UseVisualStyleBackColor = true;
@@ -257,23 +240,22 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 8);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(46, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(689, 201);
+            this.dataGridView1.Size = new System.Drawing.Size(1034, 309);
             this.dataGridView1.TabIndex = 34;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // frmSkladiste
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(757, 542);
+            this.ClientSize = new System.Drawing.Size(1136, 834);
             this.Controls.Add(this.btnGotoveIsporuke);
             this.Controls.Add(this.btnUrediSkladiste);
             this.Controls.Add(this.btnPrimjeni);
@@ -288,10 +270,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmSkladiste";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "7";
+            this.Text = "Skladište";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericKolicina)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -67,11 +67,13 @@ namespace Skladiste_HMR
                 btnBrisiNar.Show();
                 CiscenjeProzora();
                 IsprazniBox();
-
-                narudzba.Id= int.Parse(dataGridViewNar.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
+            else
+            {
+                btnBrisiNar.Hide();
+            }
+            narudzba.Id = int.Parse(dataGridViewNar.Rows[e.RowIndex].Cells[0].Value.ToString());
             dataGridViewIsp.Show();
-
             isporuka.PrikazIsporukaNarudzbe(narudzba.Id, dataGridViewIsp);
         }
        
@@ -103,8 +105,11 @@ namespace Skladiste_HMR
 
         private void dataGridViewNar_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            frmIsporuke isporuke = new frmIsporuke(narudzba.Id);
-            isporuke.ShowDialog();
+            if (korisnik.Uloga == "poslovoda")
+            {
+                frmIsporuke isporuke = new frmIsporuke(narudzba.Id);
+                isporuke.ShowDialog();
+            }
         }
 
         private void CiscenjeProzora()
