@@ -7,7 +7,7 @@ namespace Skladiste_HMR
         //string za spajanje na bazu
         public static string ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Skladiste;Integrated Security=True;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
     }
-    static class Provjere
+    public static class Provjere
     {
         public static bool KratkaProvjeraUnosa(string unos)
         {
